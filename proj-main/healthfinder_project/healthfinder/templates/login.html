@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+
+{% block title %}Login - HealthFinder{% endblock %}
+
+{% block content %}
+<style>
+  body {
+    min-height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #74ebd5 0%, #ACB6E5 100%);
+    background-attachment: fixed;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  .card {
+    margin-top: 8vh;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 12px 36px rgb(0 0 0 / 0.15);
+    max-width: 400px;
+  }
+
+  h2 {
+    color: #135589;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+  }
+
+  label {
+    font-weight: 600;
+    color: #135589;
+  }
+
+  .btn-primary {
+    background: #1d6ed9;
+    border: none;
+    font-weight: 600;
+    padding: 0.6em 0;
+    border-radius: 8px;
+    width: 100%;
+    transition: background-color 0.3s ease;
+  }
+
+  .btn-primary:hover {
+    background: #145bb5;
+  }
+</style>
+
+<div class="card shadow-sm p-4 mx-auto">
+  <h2 class="mb-4 text-center">Login</h2>
+  <form method="POST" action="{{ url_for('users_bp.login') }}">
+    <div class="mb-3">
+      <label for="username" class="form-label">Username</label>
+      <input type="text" id="username" name="username" class="form-control" required autofocus>
+    </div>
+    <div class="mb-3">
+      <label for="password" class="form-label">Password</label>
+      <input type="password" id="password" name="password" class="form-control" required>
+    </div>
+    <button class="btn btn-primary w-100" type="submit">Log In</button>
+  </form>
+</div>
+{% endblock %}

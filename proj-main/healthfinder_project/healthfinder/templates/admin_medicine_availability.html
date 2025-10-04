@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Medicine Availability - Admin Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h2>Check Medicine Availability</h2>
+    <form method="post" action="{{ url_for('admin.medicine_availability') }}">
+        <input type="text" name="medicine_name" placeholder="Enter medicine name" value="{{ medicine_name }}">
+        <button type="submit">Check</button>
+    </form>
+
+    {% if results %}
+        <h3>Pharmacies with "{{ medicine_name }}" in stock:</h3>
+        <ul>
+        {% for stock in results %}
+            <li>{{ stock.pharmacy.name }} - {{ stock.quantity }} units available</li>
+        {% endfor %}
+        </ul>
+    {% elif medicine_name %}
+        <p>No pharmacies found with this medicine in stock.</p>
+    {% endif %}
+</body>
+</html>

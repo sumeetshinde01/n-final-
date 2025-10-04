@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medicine Availability | HealthFinder</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .medicine-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .medicine-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .search-container {
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+        .availability-badge {
+            font-size: 0.8rem;
+            padding: 5px 10px;
+        }
+        .pharmacy-info {
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="/">HealthFinder</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/medicines">Medicines</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/hospitals">Hospitals</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/pharmacies">Pharmacies</a>
+                    </li>
+                </ul>
+                <div class="d-flex">
+                    <a href="/login" class="btn btn-outline-light me-2">Login</a>
+                    <a href="/register" class="btn btn-light">Register</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container py-5">
+        <h1 class="mb-4">Medicine Availability</h1>
+        
+        <!-- Search Section -->
+        <div class="search-container shadow-sm">
+            <form action="/medicines" method="get">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Search for medicines..." id="medicineSearch" name="query" value="{{ search_query }}">
+                            <button class="btn btn-primary" type="submit">
+                                <i class="fas fa-search"></i> Search
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <select class="form-select" id="locationFilter" name="location">
+                            <option selected>Filter by location</option>
+                            <option value="1">Nearby (5 km)</option>
+                            <option value="2">Within 10 km</option>
+                            <option value="3">All locations</option>
+                        </select>
+                    </div>
+                </div>
+            </form>
+        </div>
+        
+
+        
+        <!-- Medicines List -->
+        <div class="row row-cols-1 row-cols-md-3 g-4" id="medicinesList">
+            {% for medicine in medicines %}
+            <div class="col">
+                <div class="card h-100 medicine-card">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start">
+                            <h5 class="card-title">{{ medicine.name }}</h5>
+                            <span class="badge bg-success availability-badge">In Stock</span>
+                        </div>
+                        <p class="card-text">{{ medicine.description }}</p>
+                        <p class="card-text"><strong>Category:</strong> {{ medicine.category }}</p>
+                        <p class="card-text"><strong>Price:</strong> ₹{{ medicine.price }}</p>
+                        <p class="card-text"><strong>Manufacturer:</strong> {{ medicine.manufacturer }}</p>
+                        {% if medicine.prescription_required %}
+                        <p class="card-text"><span class="badge bg-warning">Prescription Required</span></p>
+                        {% endif %}
+                        <hr>
+                        <div class="pharmacy-info">
+                            <p class="mb-1"><strong>Available at:</strong></p>
+                            <ul class="list-unstyled">
+                        <li><i class="fas fa-store text-primary me-2"></i> City Pharmacy (2.3 km)</li>
+                        <li><i class="fas fa-store text-primary me-2"></i> MediPlus (3.5 km)</li>
+                        <li><i class="fas fa-store text-primary me-2"></i> HealthMart (5.1 km)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card-footer bg-transparent">
+                        <a href="http://127.0.0.1:5000/hospitals" target="_blank" class="btn btn-outline-primary w-100">
+                            <i class="fas fa-map-marker-alt me-2"></i> View on Map
+                        </a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        
+        <!-- No Results Message (Hidden by default) -->
+        <div class="text-center py-5 {% if medicines %}d-none{% endif %}" id="noResults">
+            <i class="fas fa-search fa-3x text-muted mb-3"></i>
+            <h3>No medicines found</h3>
+            <p class="text-muted">Try adjusting your search criteria</p>
+        </div>
+        
+        <!-- Pagination -->
+        <nav aria-label="Medicine pagination" class="mt-4">
+            <ul class="pagination justify-content-center">
+                {% if pagination.has_prev %}
+                <li class="page-item">
+                    <a class="page-link" href="{{ url_for('medicines.medicines', page=pagination.prev_num) }}" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+                {% else %}
+                <li class="page-item disabled">
+                    <a class="page-link" href="#" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+                {% endif %}
+                
+                {% for page_num in pagination.iter_pages(left_edge=1, right_edge=1, left_current=2, right_current=2) %}
+                    {% if page_num %}
+                        {% if page_num == pagination.page %}
+                        <li class="page-item active"><a class="page-link" href="#">{{ page_num }}</a></li>
+                        {% else %}
+                        <li class="page-item"><a class="page-link" href="{{ url_for('medicines.medicines', page=page_num) }}">{{ page_num }}</a></li>
+                        {% endif %}
+                    {% else %}
+                        <li class="page-item disabled"><a class="page-link" href="#">...</a></li>
+                    {% endif %}
+                {% endfor %}
+                
+                {% if pagination.has_next %}
+                <li class="page-item">
+                    <a class="page-link" href="{{ url_for('medicines.medicines', page=pagination.next_num) }}" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+                {% else %}
+                <li class="page-item disabled">
+                    <a class="page-link" href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+                {% endif %}
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>HealthFinder</h5>
+                    <p>Your one-stop solution for all healthcare needs.</p>
+                </div>
+                <div class="col-md-3">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="/" class="text-white">Home</a></li>
+                        <li><a href="/medicines" class="text-white">Medicines</a></li>
+                        <li><a href="/hospitals" class="text-white">Hospitals</a></li>
+                        <li><a href="/pharmacies" class="text-white">Pharmacies</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Contact</h5>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-envelope me-2"></i> info@healthfinder.com</li>
+                        <li><i class="fas fa-phone me-2"></i> +1 (555) 123-4567</li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <div class="text-center">
+                <p class="mb-0">&copy; 2023 HealthFinder. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Simple search functionality -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const searchInput = document.getElementById('medicineSearch');
+            const medicinesList = document.getElementById('medicinesList');
+            const noResults = document.getElementById('noResults');
+            
+            searchInput.addEventListener('keyup', function() {
+                const searchTerm = this.value.toLowerCase();
+                const medicineCards = medicinesList.querySelectorAll('.col');
+                let resultsFound = false;
+                
+                medicineCards.forEach(function(card) {
+                    const medicineName = card.querySelector('.card-title').textContent.toLowerCase();
+                    if (medicineName.includes(searchTerm)) {
+                        card.style.display = '';
+                        resultsFound = true;
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+                
+                if (resultsFound) {
+                    medicinesList.classList.remove('d-none');
+                    noResults.classList.add('d-none');
+                } else {
+                    medicinesList.classList.add('d-none');
+                    noResults.classList.remove('d-none');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+
