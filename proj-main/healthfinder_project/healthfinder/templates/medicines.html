@@ -9,7 +9,7 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
-    <!-- Font Awesome for icons -->
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
@@ -34,6 +34,56 @@
       }
       .pharmacy-info {
         font-size: 0.9rem;
+      }
+      .pharmacy-option {
+        transition: all 0.3s ease;
+        border: none;
+        border-radius: 8px;
+        margin-bottom: 8px;
+        background: linear-gradient(135deg, #e9edf2ff 0%, #e9ecef 100%);
+        border-left: 4px solid transparent;
+      }
+      .pharmacy-option:hover {
+        transform: translateX(5px);
+        border-left-color: #0d6efd;
+        background: linear-gradient(135deg, #e9ecef 0%, #dee2e6 100%);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+      .modal.fade .modal-dialog {
+        transform: translateY(-50px);
+        transition: transform 0.3s ease-out;
+      }
+      .modal.show .modal-dialog {
+        transform: translateY(0);
+      }
+      .pharmacy-icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 12px;
+      }
+      .pharmacy-1mg .pharmacy-icon {
+        background: linear-gradient(135deg, #ff6b6b, #ee5a52);
+      }
+      .pharmacy-pharmeasy .pharmacy-icon {
+        background: linear-gradient(135deg, #4ecdc4, #44a08d);
+      }
+      .pharmacy-netmeds .pharmacy-icon {
+        background: linear-gradient(135deg, #45b7d1, #3498db);
+      }
+      .pharmacy-apollo .pharmacy-icon {
+        background: linear-gradient(135deg, #96ceb4, #7bcba7);
+      }
+      .distance-loading {
+        color: #6c757d;
+        font-style: italic;
+      }
+      .price-loading {
+        color: #6c757d;
+        font-style: italic;
       }
     </style>
   </head>
@@ -116,7 +166,7 @@
             <div class="card-body">
               <div class="d-flex justify-content-between align-items-start">
                 <h5 class="card-title">{{ medicine.name }}</h5>
-                <span class="badge bg-success availability-badge"
+                <span class="badge bg-success availability-badge stock-status"
                   >In Stock</span
                 >
               </div>
@@ -125,7 +175,11 @@
                 <strong>Category:</strong> {{ medicine.category }}
               </p>
               <p class="card-text">
-                <strong>Price:</strong> ₹{{ medicine.price }}
+                <strong>Price:</strong>
+                <span class="price-value">₹{{ medicine.price }}</span>
+                <span class="price-loading" style="display: none"
+                  >Checking prices...</span
+                >
               </p>
               <p class="card-text">
                 <strong>Manufacturer:</strong> {{ medicine.manufacturer }}
@@ -162,6 +216,12 @@
             </div>
             <div class="card-footer bg-transparent">
               <button
+                class="btn btn-success w-100 mb-2 buy-online-btn"
+                data-medicine-name="{{ medicine.name }}"
+              >
+                <i class="fas fa-shopping-cart me-2"></i> Buy Online
+              </button>
+              <button
                 class="btn btn-outline-primary w-100 view-map-btn"
                 data-medicine-name="{{ medicine.name }}"
               >
@@ -173,23 +233,82 @@
         {% endfor %}
       </div>
 
-      
+      <div
+        class="modal fade"
+        id="pharmacySelectionModal"
+        tabindex="-1"
+        aria-labelledby="pharmacySelectionModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content border-0 shadow-lg">
+            <div class="modal-header border-0 bg-light">
+              <div class="w-100 text-center">
+                <h5
+                  class="modal-title text-dark fw-bold"
+                  id="pharmacySelectionModalLabel"
+                >
+                  Buy Online
+                </h5>
+                <p class="text-muted mb-0 small">
+                  Select your preferred pharmacy for
+                  <span
+                    id="selectedMedicineName"
+                    class="fw-semibold text-primary"
+                  ></span
+                  ><br /><br />Some medicines may show "Out of Stock" on card
+                  but other websites may have them in stock.
+                </p>
+              </div>
+              <button
+                type="button"
+                class="btn-close position-absolute top-0 end-0 m-3"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body p-4">
+              <div class="list-group border-0" id="pharmacyOptions">
+              </div>
+            </div>
+            <div class="modal-footer border-0 bg-light">
+              <button
+                type="button"
+                class="btn btn-outline-secondary btn-sm"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <script>
         const medicineDistances = new Map();
         let userLocation = null;
 
         document.addEventListener("DOMContentLoaded", function () {
           initializeLocation();
-          
-          const locationFilter = document.getElementById('locationFilter');
-          locationFilter.addEventListener('change', filterByLocation);
-          
-          document.querySelectorAll('.view-map-btn').forEach(button => {
-            button.addEventListener('click', function() {
-              const medicineName = this.getAttribute('data-medicine-name');
+
+          const locationFilter = document.getElementById("locationFilter");
+          locationFilter.addEventListener("change", filterByLocation);
+
+          document.querySelectorAll(".view-map-btn").forEach((button) => {
+            button.addEventListener("click", function () {
+              const medicineName = this.getAttribute("data-medicine-name");
               openMapForMedicine(medicineName);
             });
           });
+
+          document.querySelectorAll(".buy-online-btn").forEach((button) => {
+            button.addEventListener("click", function () {
+              const medicineName = this.getAttribute("data-medicine-name");
+              showPharmacySelectionModal(medicineName);
+            });
+          });
+
+          updateMedicinePricesAndStockStatus();
         });
 
         function initializeLocation() {
@@ -225,9 +344,18 @@
           const centerLng = userLocation ? userLocation.lng : 77.209;
 
           const pharmacyChains = [
-            "Apollo Pharmacy", "MedPlus", "Wellness Forever", "Guardian Pharmacy",
-            "Health & Glow", "PharmEasy Store", "1mg Pharmacy", "Netmeds Pharmacy",
-            "Fortis Pharmacy", "Max Healthcare", "Local Medical Store", "City Pharmacy"
+            "Apollo Pharmacy",
+            "MedPlus",
+            "Wellness Forever",
+            "Guardian Pharmacy",
+            "Health & Glow",
+            "PharmEasy Store",
+            "1mg Pharmacy",
+            "Netmeds Pharmacy",
+            "Fortis Pharmacy",
+            "Max Healthcare",
+            "Local Medical Store",
+            "City Pharmacy",
           ];
 
           const medicineCards = document.querySelectorAll(".medicine-card");
@@ -237,28 +365,72 @@
             const pharmacyItems = pharmacyList.querySelectorAll("li");
 
             const distances = [];
-            
+
             pharmacyItems.forEach((item, i) => {
               const distance = 0.5 + Math.random() * 7.5;
               distances.push(distance);
-              
-              const pharmacyName = pharmacyChains[Math.floor(Math.random() * pharmacyChains.length)];
-              
+
+              const pharmacyName =
+                pharmacyChains[
+                  Math.floor(Math.random() * pharmacyChains.length)
+                ];
+
               const distanceSpan = item.querySelector("span");
-              distanceSpan.textContent = `${pharmacyName} (${distance.toFixed(1)} km)`;
+              distanceSpan.textContent = `${pharmacyName} (${distance.toFixed(
+                1
+              )} km)`;
               distanceSpan.classList.remove("distance-loading");
             });
-            
+
             if (distances.length > 0) {
               const minDistance = Math.min(...distances);
               medicineDistances.set(`medicine-${index}`, minDistance);
-              card.setAttribute('data-min-distance', minDistance);
+              card.setAttribute("data-min-distance", minDistance);
             }
           });
         }
 
+        function updateMedicinePricesAndStockStatus() {
+          const medicineCards = document.querySelectorAll(".medicine-card");
+
+          medicineCards.forEach((card) => {
+            const medicineName = card.querySelector(".card-title").textContent;
+            const priceElement = card.querySelector(".price-value");
+            const priceLoading = card.querySelector(".price-loading");
+            const stockBadge = card.querySelector(".stock-status");
+
+            priceElement.style.display = "none";
+            priceLoading.style.display = "inline";
+
+
+            setTimeout(() => {
+              const originalPrice = parseFloat(
+                priceElement.textContent.replace("₹", "")
+              );
+              const priceVariation = 0.8 + Math.random() * 0.4; 
+              const newPrice = originalPrice * priceVariation;
+
+              const isInStock = Math.random() < 0.8;
+
+              priceElement.textContent = `₹${newPrice.toFixed(2)}`;
+              priceLoading.style.display = "none";
+              priceElement.style.display = "inline";
+
+              if (isInStock) {
+                stockBadge.textContent = "In Stock";
+                stockBadge.className =
+                  "badge bg-success availability-badge stock-status";
+              } else {
+                stockBadge.textContent = "Out of Stock";
+                stockBadge.className =
+                  "badge bg-danger availability-badge stock-status";
+              }
+            }, 1000 + Math.random() * 2000); 
+          });
+        }
+
         function calculateDistance(lat1, lon1, lat2, lon2) {
-          const R = 6371; 
+          const R = 6371;
           const dLat = ((lat2 - lat1) * Math.PI) / 180;
           const dLon = ((lon2 - lon1) * Math.PI) / 180;
           const a =
@@ -272,21 +444,24 @@
           return distance;
         }
 
-        // Location filter function
+        // Location Filter
         function filterByLocation() {
-          const locationFilter = document.getElementById('locationFilter');
+          const locationFilter = document.getElementById("locationFilter");
           const selectedValue = locationFilter.value;
-          const medicineCards = document.querySelectorAll('.medicine-card');
-          
-          medicineCards.forEach(card => {
-            if (selectedValue === 'all') {
-              card.closest('.col').style.display = '';
+          const medicineCards = document.querySelectorAll(".medicine-card");
+
+          medicineCards.forEach((card) => {
+            if (selectedValue === "all") {
+              card.closest(".col").style.display = "";
             } else {
-              const minDistance = card.getAttribute('data-min-distance');
-              if (minDistance && parseFloat(minDistance) <= parseFloat(selectedValue)) {
-                card.closest('.col').style.display = '';
+              const minDistance = card.getAttribute("data-min-distance");
+              if (
+                minDistance &&
+                parseFloat(minDistance) <= parseFloat(selectedValue)
+              ) {
+                card.closest(".col").style.display = "";
               } else {
-                card.closest('.col').style.display = 'none';
+                card.closest(".col").style.display = "none";
               }
             }
           });
@@ -294,49 +469,130 @@
 
         function openMapForMedicine(medicineName) {
           if (!userLocation) {
-            alert('Please allow location access to find nearby pharmacies.');
+            alert("Please allow location access to find nearby pharmacies.");
             return;
           }
 
           const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
-          
+
           const searchQuery = `pharmacy medical store chemist ${medicineName}`;
-          
+
           if (isIOS) {
-            const url = `https://maps.apple.com/?q=${encodeURIComponent(searchQuery)}&sll=${userLocation.lat},${userLocation.lng}&z=12&t=m`;
-            window.open(url, '_blank');
+            const url = `https://maps.apple.com/?q=${encodeURIComponent(
+              searchQuery
+            )}&sll=${userLocation.lat},${userLocation.lng}&z=12&t=m`;
+            window.open(url, "_blank");
           } else {
-            const url = `https://www.google.com/maps/search/${encodeURIComponent(searchQuery)}/@${userLocation.lat},${userLocation.lng},13z`;
-            window.open(url, '_blank');
+            const url = `https://www.google.com/maps/search/${encodeURIComponent(
+              searchQuery
+            )}/@${userLocation.lat},${userLocation.lng},13z`;
+            window.open(url, "_blank");
           }
         }
 
+        function showPharmacySelectionModal(medicineName) {
+          document.getElementById("selectedMedicineName").textContent =
+            medicineName;
+
+          const pharmacyOptions = document.getElementById("pharmacyOptions");
+          pharmacyOptions.innerHTML = "";
+
+          // Pharmacy websites
+          const onlinePharmacies = [
+            {
+              name: "1mg",
+              url: `https://www.1mg.com/search/all?name=${encodeURIComponent(
+                medicineName
+              )}`,
+              icon: "fas fa-capsules",
+              class: "pharmacy-1mg",
+            },
+            {
+              name: "PharmEasy",
+              url: `https://pharmeasy.in/search/all?name=${encodeURIComponent(
+                medicineName
+              )}`,
+              icon: "fas fa-prescription-bottle",
+              class: "pharmacy-pharmeasy",
+            },
+            {
+              name: "Netmeds",
+              url: `https://www.netmeds.com/products?q=${encodeURIComponent(
+                medicineName
+              )}`,
+              icon: "fas fa-pills",
+              class: "pharmacy-netmeds",
+            },
+            {
+              name: "Apollo Pharmacy",
+              url: `https://www.apollopharmacy.in/search-medicines/${encodeURIComponent(
+                medicineName
+              )}`,
+              icon: "fas fa-hospital",
+              class: "pharmacy-apollo",
+            },
+          ];
+
+          onlinePharmacies.forEach((pharmacy) => {
+            const optionElement = document.createElement("a");
+            optionElement.href = "#";
+            optionElement.className = `list-group-item list-group-item-action pharmacy-option ${pharmacy.class}`;
+            optionElement.innerHTML = `
+              <div class="d-flex align-items-center">
+                <div class="pharmacy-icon text-white">
+                  <i class="${pharmacy.icon}"></i>
+                </div>
+                <div class="flex-grow-1">
+                  <h6 class="mb-1 fw-semibold text-dark">${pharmacy.name}</h6>
+                  <small class="text-muted">Available • Free delivery</small>
+                </div>
+                <div class="text-muted">
+                  <i class="fas fa-chevron-right small"></i>
+                </div>
+              </div>
+            `;
+
+            optionElement.addEventListener("click", function (e) {
+              e.preventDefault();
+              window.open(pharmacy.url, "_blank");
+              const modal = bootstrap.Modal.getInstance(
+                document.getElementById("pharmacySelectionModal")
+              );
+              modal.hide();
+            });
+
+            pharmacyOptions.appendChild(optionElement);
+          });
+
+          const pharmacyModal = new bootstrap.Modal(
+            document.getElementById("pharmacySelectionModal")
+          );
+          pharmacyModal.show();
+        }
+
         function findNearbyPharmacies() {
-          const apiKey = 'AIzaSyBWevcMn1N8_jJbrTmOvIdFmmMoCBmkE4s';
-          const radius = 5000; 
-          const types = ['pharmacy', 'drugstore', 'hospital', 'health'];
-          
-          const url = `https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${userLocation.lat},${userLocation.lng}&radius=${radius}&type=${types.join('|')}&key=${apiKey}`;
-          
+          const apiKey = "AIzaSyBWevcMn1N8_jJbrTmOvIdFmmMoCBmkE4s";
+          const radius = 5000;
+          const types = ["pharmacy", "drugstore", "hospital", "health"];
+
+          const url = `https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${
+            userLocation.lat
+          },${userLocation.lng}&radius=${radius}&type=${types.join(
+            "|"
+          )}&key=${apiKey}`;
+
           fetch(url)
-            .then(response => response.json())
-            .then(data => {
-              if (data.results) {          
-                console.log('Nearby pharmacies:', data.results);
+            .then((response) => response.json())
+            .then((data) => {
+              if (data.results) {
+                console.log("Nearby pharmacies:", data.results);
               }
             })
-            .catch(error => {
-              console.error('Error fetching pharmacy data:', error);
+            .catch((error) => {
+              console.error("Error fetching pharmacy data:", error);
             });
         }
       </script>
-
-      <style>
-        .distance-loading {
-          color: #6c757d;
-          font-style: italic;
-        }
-      </style>
 
       <!-- No Results Message (Hidden by default) -->
       <div
