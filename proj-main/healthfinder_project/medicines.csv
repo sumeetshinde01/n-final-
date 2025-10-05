@@ -1,44 +1,80 @@
 name,description,category,price,manufacturer,prescription_required
 Abacavir,Nucleoside reverse transcriptase inhibitor used to treat HIV/AIDS,Antiviral,450.0,Cipla,True
 Acarbose,Alpha-glucosidase inhibitor used to treat type 2 diabetes,Diabetes,120.0,Sun Pharma,True
+Accupril,ACE inhibitor for high blood pressure and heart failure,Cardiovascular,180.0,Pfizer,True
+Acetaminophen,Pain reliever and fever reducer,Pain Relief,20.0,Johnson & Johnson,False
 Acetazolamide,Carbonic anhydrase inhibitor used to treat glaucoma and altitude sickness,Diuretic,85.0,Alkem,True
+Aciloc,Ranitidine for acidity and ulcers,Digestive,25.0,Cadila,False
+Actified,Combination decongestant and antihistamine,Respiratory,45.0,GSK,False
+Actonel,Treatment for osteoporosis,Bone Health,320.0,Sanofi,True
 Acyclovir,Antiviral medication used to treat herpes infections,Antiviral,180.0,GSK,False
+Adderall,CNS stimulant for ADHD,Mental Health,280.0,Shire,True
+Advair,Combination inhaler for asthma and COPD,Respiratory,650.0,GSK,True
+Advil,Ibuprofen for pain and inflammation,Pain Relief,35.0,Pfizer,False
 Albendazole,Medication used to treat parasitic worm infestations,Antiparasitic,45.0,Mankind,False
 Albuterol,Bronchodilator that relaxes muscles in the airways,Respiratory,220.0,Cipla,False
+Aldactone,Potassium-sparing diuretic,Diuretic,75.0,Pfizer,True
 Alendronate,Bisphosphonate medication used to treat osteoporosis,Bone Health,320.0,Dr. Reddy's,True
+Allegra,Fexofenadine for allergy relief,Allergy,120.0,Sanofi,False
 Allopurinol,Medication used to decrease high blood uric acid levels,Gout,65.0,Intas,True
 Alprazolam,Benzodiazepine used to treat anxiety and panic disorders,Mental Health,110.0,Torrent,True
+Altace,Ramipril for hypertension,Cardiovascular,95.0,Monarch,True
 Amiodarone,Antiarrhythmic medication used to treat irregular heartbeat,Cardiovascular,290.0,Zydus,True
 Amitriptyline,Tricyclic antidepressant used to treat depression,Mental Health,75.0,Sun Pharma,True
 Amlodipine,Calcium channel blocker used to treat high blood pressure and chest pain,Cardiovascular,38.0,Torrent,True
 Amoxicillin,Broad-spectrum antibiotic used to treat bacterial infections,Antibiotic,45.0,Cipla,True
 Ampicillin,Penicillin-type antibiotic used to treat bacterial infections,Antibiotic,60.0,Alembic,True
+Anacin,Combination pain reliever,Pain Relief,25.0,GSK,False
+Antivert,For vertigo and motion sickness,Allergy,55.0,Pfizer,False
 Aripiprazole,Atypical antipsychotic used to treat schizophrenia and bipolar disorder,Mental Health,450.0,Sun Pharma,True
+Aricept,Donepezil for Alzheimer's disease,Neurology,350.0,Eisai,True
 Aspirin,Blood-thinning medication that reduces pain, fever, and inflammation,Pain Relief,12.0,Bayer,False
+Asthalin,Salbutamol for asthma and bronchospasm,Respiratory,35.0,Cipla,False
+Atarax,Hydroxyzine for anxiety and itching,Allergy,50.0,UCB,True
 Atenolol,Beta-blocker used to treat high blood pressure and chest pain,Cardiovascular,25.0,Cipla,True
+Ativan,Lorazepam for anxiety,Mental Health,95.0,Pfizer,True
 Atorvastatin,Statin medication that lowers cholesterol levels,Cardiovascular,50.0,Lupin,True
+Augmentin,Amoxicillin-clavulanate antibiotic,Antibiotic,120.0,GSK,True
+Avomine,For motion sickness and vomiting,Digestive,55.0,Aventis,False
+Azithral,Macrolide antibiotic for bacterial infections,Antibiotic,75.0,Alembic,True
 Azithromycin,Antibiotic used to treat various bacterial infections including respiratory infections,Antibiotic,55.0,Alembic,True
 Baclofen,Muscle relaxant used to treat muscle spasms and stiffness,Muscle Relaxant,95.0,Intas,True
+Bactrim,Antibiotic combination for bacterial infections,Antibiotic,65.0,Roche,True
 Beclomethasone,Corticosteroid used to treat asthma and allergic rhinitis,Respiratory,280.0,Cipla,True
+Becadexamin,Multivitamin and mineral supplement,Vitamins,35.0,GSK,False
+Becosules,Vitamin B complex supplement,Vitamins,45.0,Pfizer,False
+Benadryl,Antihistamine for allergies and cough,Allergy,45.0,Johnson & Johnson,False
 Benzonatate,Non-narcotic cough suppressant,Respiratory,120.0,Mankind,False
 Betamethasone,Corticosteroid used to treat inflammation and allergic reactions,Anti-inflammatory,110.0,GSK,True
+Betaloc,Metoprolol for hypertension and angina,Cardiovascular,75.0,AstraZeneca,True
+Betnesol,Corticosteroid for inflammation,Anti-inflammatory,55.0,GSK,True
+Betnovate,Potent corticosteroid cream,Dermatology,65.0,GSK,True
+Biaxin,Clarithromycin antibiotic,Antibiotic,160.0,Abbott,True
 Bisacodyl,Stimulant laxative used to treat constipation,Digestive,35.0,Abbott,False
 Bisoprolol,Beta-blocker used to treat high blood pressure and heart failure,Cardiovascular,85.0,Torrent,True
+Boroline,Antiseptic cream for skin care,Dermatology,30.0,G.D. Pharmaceuticals,False
+Brufen,Ibuprofen for pain and inflammation,Pain Relief,40.0,Abbott,False
 Budesonide,Corticosteroid used to treat asthma and COPD,Respiratory,320.0,AstraZeneca,True
 Bupropion,Antidepressant used to treat depression and aid in smoking cessation,Mental Health,280.0,Sun Pharma,True
 Buspirone,Anti-anxiety medication,Mental Health,190.0,Dr. Reddy's,True
 Calcitriol,Active form of vitamin D used to treat vitamin D deficiency,Vitamins,150.0,Cipla,True
+Calpol,Paracetamol for fever and pain,Pain Relief,18.0,GSK,False
 Candesartan,Angiotensin II receptor blocker used to treat high blood pressure,Cardiovascular,120.0,AstraZeneca,True
+Capoten,Captopril for hypertension,Cardiovascular,50.0,Bristol-Myers Squibb,True
 Captopril,ACE inhibitor used to treat high blood pressure and heart failure,Cardiovascular,45.0,Zydus,True
 Carbamazepine,Anticonvulsant used to treat seizures and nerve pain,Neurology,75.0,Sun Pharma,True
 Carbidopa-Levodopa,Combination medication used to treat Parkinson's disease,Neurology,320.0,Sun Pharma,True
+Cardace,Ramipril for hypertension and heart failure,Cardiovascular,85.0,Sanofi,True
 Carvedilol,Alpha/beta-blocker used to treat heart failure and high blood pressure,Cardiovascular,110.0,Dr. Reddy's,True
+Catapres,Clonidine for hypertension,Cardiovascular,70.0,Boehringer Ingelheim,True
 Cefadroxil,Cephalosporin antibiotic used to treat bacterial infections,Antibiotic,85.0,Alkem,True
 Cefixime,Third-generation cephalosporin antibiotic,Antibiotic,120.0,Lupin,True
 Cefpodoxime,Third-generation cephalosporin antibiotic,Antibiotic,150.0,Cipla,True
 Ceftriaxone,Third-generation cephalosporin antibiotic,Antibiotic,180.0,Alkem,True
+Celebrex,Celecoxib for arthritis pain,Pain Relief,120.0,Pfizer,True
 Cephalexin,First-generation cephalosporin antibiotic,Antibiotic,65.0,GSK,True
 Cetirizine,Antihistamine that treats allergy symptoms such as sneezing, itching, watery eyes, and runny nose,Allergy,28.0,Sun Pharma,False
+Cetzine,Cetirizine for allergy relief,Allergy,25.0,GSK,False
 Chloramphenicol,Broad-spectrum antibiotic used to treat serious infections,Antibiotic,95.0,Cipla,True
 Chlordiazepoxide,Benzodiazepine used to treat anxiety and alcohol withdrawal,Mental Health,110.0,Sun Pharma,True
 Chloroquine,Antimalarial medication also used to treat autoimmune diseases,Antimalarial,75.0,IPCA,True
@@ -46,10 +82,12 @@ Chlorpheniramine,Antihistamine used to treat allergy symptoms,Allergy,15.0,Cipla
 Chlorpromazine,Antipsychotic medication used to treat schizophrenia,Mental Health,65.0,Sun Pharma,True
 Chlorthalidone,Thiazide diuretic used to treat high blood pressure and fluid retention,Diuretic,45.0,Ipca,True
 Cholecalciferol,Vitamin D3 supplement used to treat vitamin D deficiency,Vitamins,25.0,USV,False
+Cialis,Tadalafil for erectile dysfunction,Urology,280.0,Eli Lilly,True
 Cimetidine,H2 blocker that decreases stomach acid production,Digestive,35.0,GSK,False
 Ciprofloxacin,Fluoroquinolone antibiotic used to treat bacterial infections,Antibiotic,85.0,Cipla,True
 Citalopram,SSRI antidepressant used to treat depression and anxiety,Mental Health,120.0,Torrent,True
 Clarithromycin,Macrolide antibiotic used to treat bacterial infections,Antibiotic,150.0,Abbott,True
+Claritin,Loratadine for allergy relief,Allergy,45.0,Schering-Plough,False
 Clindamycin,Lincosamide antibiotic used to treat bacterial infections,Antibiotic,95.0,Pfizer,True
 Clobetasol,High-potency corticosteroid used to treat skin conditions,Dermatology,180.0,GSK,True
 Clomipramine,Tricyclic antidepressant used to treat OCD and depression,Mental Health,110.0,Sun Pharma,True
@@ -58,51 +96,98 @@ Clonidine,Medication used to treat high blood pressure and ADHD,Cardiovascular,6
 Clopidogrel,Antiplatelet medication that prevents blood clots,Cardiovascular,65.0,Sun Pharma,True
 Clotrimazole,Antifungal medication used to treat fungal infections,Antifungal,45.0,Bayer,False
 Codeine,Opioid pain medication and cough suppressant,Pain Relief,150.0,Sun Pharma,True
+Cogentin,Benztropine for Parkinson's disease,Neurology,85.0,Merck,True
 Colchicine,Anti-gout medication that reduces inflammation,Gout,85.0,Zydus,True
+Combiflam,Combination pain reliever,Pain Relief,30.0,Sanofi,False
+Copegus,Ribavirin for hepatitis C,Antiviral,450.0,Roche,True
+Cordarone,Amiodarone for arrhythmias,Cardiovascular,300.0,Sanofi,True
+Coreg,Carvedilol for heart failure,Cardiovascular,120.0,GSK,True
+Coumadin,Warfarin anticoagulant,Cardiovascular,50.0,Bristol-Myers Squibb,True
+Cozaar,Losartan for hypertension,Cardiovascular,45.0,Merck,True
+Cremaffin,Laxative for constipation,Digestive,35.0,Abbott,False
+Crestor,Rosuvastatin for cholesterol,Cardiovascular,130.0,AstraZeneca,True
 Cyclobenzaprine,Muscle relaxant used to relieve muscle spasms and pain,Muscle Relaxant,65.0,Sun Pharma,True
+Cyclopam,Dicyclomine for abdominal cramps,Digestive,35.0,Mankind,False
 Cyclophosphamide,Chemotherapy medication used to treat various cancers,Oncology,450.0,Baxter,True
 Cyclosporine,Immunosuppressant used to prevent organ rejection,Immunosuppressant,520.0,Novartis,True
 Cyproheptadine,Antihistamine used to treat allergies and increase appetite,Allergy,35.0,Cipla,True
+Cytotec,Misoprostol for ulcer prevention,Digestive,70.0,Pfizer,True
 Dapsone,Antibiotic used to treat leprosy and certain skin conditions,Antibiotic,120.0,Lupin,True
+Darvoce,Propoxyphene for pain,Pain Relief,95.0,Abbott,True
+Decadron,Dexamethasone for inflammation,Anti-inflammatory,80.0,Merck,True
+Deltasone,Prednisone for inflammation,Anti-inflammatory,70.0,Pfizer,True
+Depakote,Divalproex for seizures and bipolar disorder,Neurology,160.0,Abbott,True
+Deriphyllin,For bronchial asthma and COPD,Respiratory,45.0,Franco-Indian,True
+Desyrel,Trazodone for depression,Mental Health,70.0,Bristol-Myers Squibb,True
 Dexamethasone,Corticosteroid used to treat inflammation and autoimmune conditions,Anti-inflammatory,75.0,Zydus,True
 Dextromethorphan,Cough suppressant,Respiratory,45.0,Cipla,False
+Diamox,Acetazolamide for glaucoma,Diuretic,90.0,Duramed,True
 Diazepam,Benzodiazepine used to treat anxiety, muscle spasms, and seizures,Mental Health,95.0,Abbott,True
 Diclofenac,NSAID used to treat pain and inflammatory conditions like arthritis,Pain Relief,18.0,Novartis,False
+Diclogesic,Diclofenac with paracetamol,Pain Relief,35.0,Intas,False
+Digene,Antacid for acidity and indigestion,Digestive,28.0,Abbott,False
 Digoxin,Cardiac glycoside used to treat heart failure and arrhythmias,Cardiovascular,65.0,GSK,True
+Dilantin,Phenytoin for seizures,Neurology,60.0,Pfizer,True
 Diltiazem,Calcium channel blocker used to treat high blood pressure and chest pain,Cardiovascular,85.0,Sun Pharma,True
+Diovan,Valsartan for hypertension,Cardiovascular,100.0,Novartis,True
 Diphenhydramine,Antihistamine used to treat allergies and aid sleep,Allergy,25.0,Cipla,False
+Dispirin,Aspirin for pain and fever,Pain Relief,15.0,Abbott,False
 Divalproex,Anticonvulsant used to treat seizures and bipolar disorder,Neurology,150.0,Abbott,True
 Docusate,Stool softener used to treat constipation,Digestive,35.0,Cipla,False
+Dolo 650,Paracetamol tablet for fever and pain relief,Pain Relief,25.0,Micro Labs,False
 Domperidone,Antiemetic used to treat nausea and vomiting,Digestive,45.0,Torrent,False
 Donepezil,Cholinesterase inhibitor used to treat Alzheimer's disease,Neurology,320.0,Eisai,True
 Doxazosin,Alpha-blocker used to treat high blood pressure and enlarged prostate,Cardiovascular,95.0,Pfizer,True
 Doxycycline,Tetracycline antibiotic used to treat bacterial infections,Antibiotic,75.0,Cipla,True
+Duolin,Combination bronchodilator for asthma,Respiratory,85.0,Cipla,True
 Duloxetine,SNRI antidepressant used to treat depression and anxiety,Mental Health,180.0,Eli Lilly,True
+Duphaston,Dydrogesterone for hormonal imbalance,Hormonal,120.0,Abbott,True
+Effexor,Venlafaxine for depression and anxiety,Mental Health,130.0,Wyeth,True
+Eldepryl,Selegiline for Parkinson's disease,Neurology,150.0,Dr. Reddy's,True
+Emeset,Ondansetron for nausea and vomiting,Digestive,85.0,Cipla,True
 Enalapril,ACE inhibitor used to treat high blood pressure and heart failure,Cardiovascular,65.0,Merck,True
+Enbrel,Etanercept for autoimmune diseases,Immunosuppressant,2500.0,Amgen,True
 Erythromycin,Macrolide antibiotic used to treat bacterial infections,Antibiotic,85.0,Abbott,True
 Escitalopram,SSRI antidepressant used to treat depression and anxiety,Mental Health,150.0,Cipla,True
+Esidrix,Hydrochlorothiazide diuretic,Diuretic,30.0,Novartis,True
 Esomeprazole,Proton pump inhibitor that reduces stomach acid production,Digestive,120.0,AstraZeneca,False
 Estradiol,Estrogen hormone replacement therapy,Hormonal,180.0,Pfizer,True
 Ethambutol,Antimycobacterial medication used to treat tuberculosis,Antibiotic,95.0,Lupin,True
+Eulexin,Flutamide for prostate cancer,Oncology,320.0,Schering-Plough,True
+Evista,Raloxifene for osteoporosis,Bone Health,260.0,Eli Lilly,True
 Famotidine,H2 blocker that decreases stomach acid production,Digestive,45.0,Cadila,False
 Felodipine,Calcium channel blocker used to treat high blood pressure,Cardiovascular,85.0,AstraZeneca,True
+Femara,Letrozole for breast cancer,Oncology,450.0,Novartis,True
 Fenofibrate,Medication used to reduce cholesterol and triglycerides,Cardiovascular,120.0,Abbott,True
 Fexofenadine,Antihistamine used to relieve allergy symptoms,Allergy,32.0,Sanofi,False
 Finasteride,5-alpha reductase inhibitor used to treat enlarged prostate and hair loss,Urology,180.0,Merck,True
+Flagyl,Metronidazole for bacterial infections,Antibiotic,60.0,Pfizer,True
+Flexeril,Cyclobenzaprine muscle relaxant,Muscle Relaxant,70.0,McNeil,True
+Flomax,Tamsulosin for enlarged prostate,Urology,100.0,Boehringer Ingelheim,True
+Flonase,Fluticasone nasal spray for allergies,Allergy,280.0,GSK,True
 Fluconazole,Antifungal medication used to treat fungal infections,Antifungal,60.0,Cipla,True
 Fludrocortisone,Corticosteroid used to treat adrenal insufficiency,Hormonal,150.0,Bristol-Myers Squibb,True
 Fluoxetine,SSRI antidepressant used to treat depression and OCD,Mental Health,95.0,Eli Lilly,True
 Fluvoxamine,SSRI antidepressant used to treat OCD and social anxiety disorder,Mental Health,120.0,Abbott,True
 Folic Acid,B vitamin used to treat folate deficiency and prevent birth defects,Vitamins,15.0,USV,False
+Fosamax,Alendronate for osteoporosis,Bone Health,330.0,Merck,True
 Furosemide,Loop diuretic used to treat fluid retention and high blood pressure,Diuretic,25.0,Sanofi,True
 Gabapentin,Anticonvulsant used to treat seizures and nerve pain,Neurology,85.0,Sun Pharma,True
+Gelusil,Antacid for hyperacidity,Digestive,32.0,Pfizer,False
 Gemfibrozil,Fibrate medication used to lower triglyceride levels,Cardiovascular,120.0,Pfizer,True
 Gentamicin,Aminoglycoside antibiotic used to treat bacterial infections,Antibiotic,95.0,Schering-Plough,True
 Glimepiride,Sulfonylurea used to treat type 2 diabetes,Diabetes,65.0,Sanofi,True
 Glipizide,Sulfonylurea used to treat type 2 diabetes,Diabetes,55.0,Pfizer,True
+Glucophage,Metformin for diabetes,Diabetes,40.0,Merck,True
+Glucotrol,Glipizide for diabetes,Diabetes,60.0,Pfizer,True
 Glyburide,Sulfonylurea used to treat type 2 diabetes,Diabetes,45.0,Sanofi,True
+Griseofulvin,Antifungal for skin infections,Antifungal,85.0,Novartis,True
 Guaifenesin,Expectorant used to treat cough,Respiratory,35.0,Cipla,False
 Haloperidol,Antipsychotic medication used to treat schizophrenia and Tourette syndrome,Mental Health,95.0,Johnson & Johnson,True
+Happi-HB,Liv 52 with hepatoprotective action,Liver Care,95.0,Himalaya,False
+Hepsera,Adefovir for hepatitis B,Antiviral,450.0,Gilead,True
+Humalog,Insulin lispro for diabetes,Diabetes,650.0,Eli Lilly,True
+Humira,Adalimumab for autoimmune diseases,Immunosuppressant,2200.0,Abbott,True
 Hydralazine,Vasodilator used to treat high blood pressure,Cardiovascular,75.0,Novartis,True
 Hydrochlorothiazide,Thiazide diuretic used to treat high blood pressure and fluid retention,Diuretic,25.0,Merck,True
 Hydrocodone,Opioid pain medication,Pain Relief,180.0,Abbott,True
@@ -111,39 +196,74 @@ Hydroxychloroquine,Antimalarial also used to treat autoimmune diseases like lupu
 Hydroxyzine,Antihistamine used to treat anxiety and itching,Allergy,45.0,UCB,True
 Hyoscyamine,Anticholinergic used to treat digestive disorders,Digestive,85.0,Pfizer,True
 Ibuprofen,Non-steroidal anti-inflammatory drug (NSAID) that reduces inflammation, swelling, and joint pain,Pain Relief,25.0,Pfizer,False
+Imdur,Isosorbide mononitrate for angina,Cardiovascular,70.0,AstraZeneca,True
+Imitrex,Sumatriptan for migraines,Neurology,190.0,GSK,True
+Imuran,Azathioprine immunosuppressant,Immunosuppressant,280.0,Prometheus,True
+Inderal,Propranolol for hypertension and anxiety,Cardiovascular,40.0,Wyeth,True
 Indomethacin,NSAID used to treat pain and inflammation,Pain Relief,45.0,Merck,True
 Insulin,Hormone used to treat diabetes,Diabetes,450.0,Novo Nordisk,True
+Intal,Cromolyn for asthma,Respiratory,120.0,Sanofi,True
+Iodex,Pain relief balm,Pain Relief,25.0,GSK,False
 Ipratropium,Anticholinergic bronchodilator used to treat COPD and asthma,Respiratory,180.0,Boehringer Ingelheim,True
 Irbesartan,Angiotensin II receptor blocker used to treat high blood pressure,Cardiovascular,95.0,Sanofi,True
 Isoniazid,Antimycobacterial medication used to treat tuberculosis,Antibiotic,45.0,Lupin,True
+Isoptin,Verapamil for hypertension and arrhythmias,Cardiovascular,90.0,Abbott,True
 Isosorbide,Nitrate used to treat angina,Cardiovascular,65.0,Merck,True
 Isotretinoin,Retinoid used to treat severe acne,Dermatology,320.0,Roche,True
 Itraconazole,Antifungal medication used to treat fungal infections,Antifungal,150.0,Johnson & Johnson,True
 Ivermectin,Antiparasitic medication used to treat parasitic infections,Antiparasitic,85.0,Merck,True
+Januvia,Sitagliptin for diabetes,Diabetes,190.0,Merck,True
+Keflex,Cephalexin antibiotic,Antibiotic,70.0,Lilly,True
+Keppra,Levetiracetam for seizures,Neurology,260.0,UCB,True
 Ketoconazole,Antifungal medication used to treat fungal infections,Antifungal,95.0,Johnson & Johnson,True
 Ketoprofen,NSAID used to treat pain and inflammation,Pain Relief,45.0,Sanofi,False
 Ketorolac,NSAID used to treat moderate to severe pain,Pain Relief,65.0,Allergan,True
+Klacid,Clarithromycin antibiotic,Antibiotic,155.0,Abbott,True
+Klaron,Sodium sulfacetamide for acne,Dermatology,85.0,Sanofi,True
+Klonopin,Clonazepam for seizures and anxiety,Neurology,90.0,Roche,True
 Labetalol,Alpha/beta-blocker used to treat high blood pressure,Cardiovascular,120.0,Prometheus,True
+Lactocalamine,Soothing lotion for skin irritation,Dermatology,65.0,Piramal,False
+Lamictal,Lamotrigine for seizures and bipolar disorder,Neurology,190.0,GSK,True
 Lamotrigine,Anticonvulsant used to treat seizures and bipolar disorder,Neurology,180.0,GSK,True
+Lanoxin,Digoxin for heart failure,Cardiovascular,70.0,GSK,True
 Lansoprazole,Proton pump inhibitor that reduces stomach acid production,Digestive,95.0,Takeda,False
+Lantus,Insulin glargine for diabetes,Diabetes,680.0,Sanofi,True
+Lasix,Furosemide diuretic,Diuretic,30.0,Sanofi,True
+Levatol,Penbutolol for hypertension,Cardiovascular,85.0,Reed & Carnrick,True
 Levetiracetam,Anticonvulsant used to treat seizures,Neurology,250.0,UCB,True
 Levocetirizine,Antihistamine used to treat allergies,Allergy,35.0,UCB,False
 Levofloxacin,Fluoroquinolone antibiotic used to treat bacterial infections,Antibiotic,120.0,Johnson & Johnson,True
 Levothyroxine,Synthetic thyroid hormone used to treat hypothyroidism,Hormonal,32.0,Abbott,True
+Lexapro,Escitalopram for depression and anxiety,Mental Health,160.0,Forest,True
+Librium,Chlordiazepoxide for anxiety,Mental Health,115.0,Valeant,True
 Lidocaine,Local anesthetic used to numb tissue and treat pain,Anesthetic,45.0,AstraZeneca,True
+Lipitor,Atorvastatin for cholesterol,Cardiovascular,55.0,Pfizer,True
 Lisinopril,ACE inhibitor used to treat high blood pressure and heart failure,Cardiovascular,35.0,Merck,True
 Lithium,Mood stabilizer used to treat bipolar disorder,Mental Health,25.0,GSK,True
+Liv 52,Herbal liver tonic and hepatoprotective,Liver Care,85.0,Himalaya,False
+Lodine,Etodolac for pain and inflammation,Pain Relief,75.0,Wyeth,True
 Loperamide,Antidiarrheal medication,Digestive,15.0,Johnson & Johnson,False
+Lopid,Gemfibrozil for triglycerides,Cardiovascular,125.0,Pfizer,True
+Lopressor,Metoprolol for hypertension,Cardiovascular,50.0,Novartis,True
 Loratadine,Antihistamine used to treat allergies,Allergy,25.0,Schering-Plough,False
 Lorazepam,Benzodiazepine used to treat anxiety,Mental Health,85.0,Wyeth,True
 Losartan,Angiotensin II receptor blocker used to treat high blood pressure,Cardiovascular,40.0,Merck,True
+Lotensin,Benazepril for hypertension,Cardiovascular,65.0,Novartis,True
 Lovastatin,Statin medication that lowers cholesterol levels,Cardiovascular,65.0,Merck,True
+Lozol,Indapamide diuretic,Diuretic,45.0,Sanofi,True
+Luminal,Phenobarbital for seizures,Neurology,70.0,Winthrop,True
+Lyrica,Pregabalin for nerve pain and seizures,Neurology,190.0,Pfizer,True
+Macrobid,Nitrofurantoin for urinary infections,Antibiotic,70.0,Procter & Gamble,True
+Macrodantin,Nitrofurantoin for urinary infections,Antibiotic,68.0,Procter & Gamble,True
 Mebendazole,Antiparasitic medication used to treat worm infections,Antiparasitic,35.0,Johnson & Johnson,False
 Meclizine,Antihistamine used to treat motion sickness and vertigo,Allergy,45.0,Pfizer,False
+Medrol,Methylprednisolone for inflammation,Anti-inflammatory,100.0,Pfizer,True
 Medroxyprogesterone,Progestin hormone used for birth control and hormone therapy,Hormonal,120.0,Pfizer,True
+Meftal-Spas,Mefenamic acid for menstrual cramps,Pain Relief,55.0,Blue Cross,False
 Meloxicam,NSAID used to treat pain and inflammation,Pain Relief,55.0,Boehringer Ingelheim,True
 Memantine,NMDA receptor antagonist used to treat Alzheimer's disease,Neurology,320.0,Merz,True
 Meperidine,Opioid pain medication,Pain Relief,150.0,Sanofi,True
+Mestinon,Pyridostigmine for myasthenia gravis,Neurology,125.0,Valeant,True
 Metformin,Oral diabetes medication that helps control blood sugar levels,Diabetes,35.0,Zydus,True
 Methadone,Opioid used to treat pain and opioid dependence,Pain Relief,95.0,Mallinckrodt,True
 Methocarbamol,Muscle relaxant used to treat muscle pain and stiffness,Muscle Relaxant,45.0,Pfizer,True
@@ -152,109 +272,352 @@ Methylphenidate,CNS stimulant used to treat ADHD and narcolepsy,Mental Health,15
 Methylprednisolone,Corticosteroid used to treat inflammation,Anti-inflammatory,95.0,Pfizer,True
 Metoclopramide,Antiemetic used to treat nausea and vomiting,Digestive,35.0,Teva,True
 Metoprolol,Beta-blocker used to treat high blood pressure and chest pain,Cardiovascular,45.0,AstraZeneca,True
+Metrogyl,Antibiotic used to treat bacterial and parasitic infections,Antibiotic,65.0,J.B. Chemicals,True
 Metronidazole,Antibiotic used to treat bacterial and parasitic infections,Antibiotic,55.0,Pfizer,True
+Mevacor,Lovastatin for cholesterol,Cardiovascular,70.0,Merck,True
+Micardis,Telmisartan for hypertension,Cardiovascular,125.0,Boehringer Ingelheim,True
+Microzide,Hydrochlorothiazide diuretic,Diuretic,28.0,Watson,True
+Midamor,Amiloride diuretic,Diuretic,55.0,Merck,True
+Migranal,Dihydroergotamine for migraines,Neurology,220.0,Novartis,True
+Minipress,Prazosin for hypertension,Cardiovascular,70.0,Pfizer,True
 Minocycline,Tetracycline antibiotic used to treat bacterial infections,Antibiotic,85.0,Ranbaxy,True
 Minoxidil,Vasodilator used to treat high blood pressure and hair loss,Cardiovascular,120.0,Pfizer,True
+Miralax,Polyethylene glycol for constipation,Digestive,85.0,Bayer,False
 Mirtazapine,Tetracyclic antidepressant used to treat depression,Mental Health,150.0,Organon,True
 Misoprostol,Prostaglandin analog used to prevent stomach ulcers,Digestive,65.0,Pfizer,True
 Modafinil,Wakefulness-promoting agent used to treat narcolepsy,Mental Health,450.0,Cephalon,True
+Monopril,Fosinopril for hypertension,Cardiovascular,85.0,Bristol-Myers Squibb,True
+Montair,Leukotriene antagonist for asthma and allergies,Respiratory,95.0,Cipla,True
 Montelukast,Leukotriene receptor antagonist used to treat asthma and allergic rhinitis,Respiratory,42.0,Glenmark,True
+Moov,Analgesic balm for muscle pain,Pain Relief,45.0,Emami,False
 Morphine,Opioid pain medication,Pain Relief,180.0,Purdue,True
+Motrin,Ibuprofen for pain and inflammation,Pain Relief,38.0,Johnson & Johnson,False
 Moxifloxacin,Fluoroquinolone antibiotic used to treat bacterial infections,Antibiotic,150.0,Bayer,True
+Mucaine,Antacid with local anesthetic for gastritis,Digestive,45.0,Franco-Indian,False
+Mucinex,Guaifenesin for cough,Respiratory,40.0,Reckitt Benckiser,False
+Mycostatin,Nystatin for fungal infections,Antifungal,60.0,Bristol-Myers Squibb,False
+Myleran,Busulfan for cancer,Oncology,350.0,GSK,True
+Mysoline,Primidone for seizures,Neurology,100.0,Wyeth,True
 Nabumetone,NSAID used to treat pain and inflammation,Pain Relief,65.0,GSK,True
 Nadolol,Beta-blocker used to treat high blood pressure and chest pain,Cardiovascular,85.0,Pfizer,True
 Naloxone,Opioid antagonist used to reverse opioid overdose,Emergency,250.0,Hospira,True
+Naprosyn,Naproxen for pain and inflammation,Pain Relief,40.0,Roche,False
 Naproxen,NSAID used to treat pain and inflammation,Pain Relief,35.0,Roche,False
+Narcan,Naloxone for opioid overdose,Emergency,260.0,Adapt,True
+Nardil,Phenelzine for depression,Mental Health,120.0,Parke-Davis,True
+Nasacort,Triamcinolone nasal spray for allergies,Allergy,280.0,Sanofi,True
+Nasonex,Mometasone nasal spray for allergies,Allergy,320.0,Schering-Plough,True
 Nebivolol,Beta-blocker used to treat high blood pressure,Cardiovascular,120.0,Forest,True
+Neoral,Cyclosporine immunosuppressant,Immunosuppressant,530.0,Novartis,True
+Neurontin,Gabapentin for seizures and nerve pain,Neurology,90.0,Pfizer,True
+Neurobion,Vitamin B complex for nerve health,Vitamins,55.0,Merck,False
+Nexium,Esomeprazole for acid reflux,Digestive,130.0,AstraZeneca,False
 Nifedipine,Calcium channel blocker used to treat high blood pressure and chest pain,Cardiovascular,75.0,Bayer,True
 Nitrofurantoin,Antibiotic used to treat urinary tract infections,Antibiotic,65.0,Procter & Gamble,True
 Nitroglycerin,Nitrate used to treat angina,Cardiovascular,95.0,Pfizer,True
 Nizatidine,H2 blocker that decreases stomach acid production,Digestive,45.0,Eli Lilly,False
+Nolvadex,Tamoxifen for breast cancer,Oncology,190.0,AstraZeneca,True
+Norco,Hydrocodone with acetaminophen for pain,Pain Relief,195.0,Watson,True
 Norethindrone,Progestin hormone used for birth control and hormone therapy,Hormonal,120.0,Pfizer,True
+Noroxin,Norfloxacin antibiotic,Antibiotic,85.0,Merck,True
+Norpace,Disopyramide for arrhythmias,Cardiovascular,120.0,Searle,True
 Nortriptyline,Tricyclic antidepressant used to treat depression,Mental Health,85.0,Eli Lilly,True
+Norvasc,Amlodipine for hypertension,Cardiovascular,42.0,Pfizer,True
+Novolog,Insulin aspart for diabetes,Diabetes,670.0,Novo Nordisk,True
+Nurokind Plus,Neurobion with multivitamins,Vitamins,65.0,Mankind,False
 Nystatin,Antifungal medication used to treat fungal infections,Antifungal,55.0,Bristol-Myers Squibb,False
+Oflox,Ofloxacin antibiotic,Antibiotic,75.0,Cipla,True
 Olanzapine,Atypical antipsychotic used to treat schizophrenia and bipolar disorder,Mental Health,320.0,Eli Lilly,True
 Olmesartan,Angiotensin II receptor blocker used to treat high blood pressure,Cardiovascular,150.0,Daiichi Sankyo,True
 Omeprazole,Proton pump inhibitor that reduces stomach acid production,Digestive,30.0,AstraZeneca,False
+Omnicef,Cefdinir antibiotic,Antibiotic,140.0,Abbott,True
 Ondansetron,Antiemetic used to prevent nausea and vomiting,Digestive,95.0,GSK,True
+Opticrom,Cromolyn eye drops for allergies,Allergy,120.0,Sanofi,True
+Oracin,Local anesthetic for mouth pain,Anesthetic,45.0,Pfizer,False
+Orap,Pimozide for Tourette's syndrome,Mental Health,150.0,Teva,True
+Orencia,Abatacept for rheumatoid arthritis,Immunosuppressant,2200.0,Bristol-Myers Squibb,True
+Orinase,Tolbutamide for diabetes,Diabetes,55.0,Pharmacia,True
+Orlistat,Weight loss medication,Weight Loss,180.0,GSK,True
+Orudis,Ketoprofen for pain and inflammation,Pain Relief,50.0,Sanofi,False
+Oruvail,Ketoprofen extended release for pain,Pain Relief,65.0,Sanofi,False
 Oseltamivir,Antiviral medication used to treat influenza,Antiviral,180.0,Roche,True
 Oxazepam,Benzodiazepine used to treat anxiety,Mental Health,95.0,Wyeth,True
+Oxcarbazepine,Anticonvulsant for seizures,Neurology,220.0,Novartis,True
 Oxybutynin,Anticholinergic used to treat overactive bladder,Urology,85.0,Johnson & Johnson,True
 Oxycodone,Opioid pain medication,Pain Relief,180.0,Purdue,True
+Oxycontin,Oxycodone extended release for pain,Pain Relief,200.0,Purdue,True
+Pacerone,Amiodarone for arrhythmias,Cardiovascular,300.0,Upsher-Smith,True
+Pamelor,Nortriptyline for depression,Mental Health,90.0,Mallinckrodt,True
+Panadol,Paracetamol for pain and fever,Pain Relief,20.0,GSK,False
+Panto,Pantoprazole for acid reflux,Digestive,70.0,Dr. Reddy's,False
 Pantoprazole,Proton pump inhibitor that reduces stomach acid production,Digestive,28.0,Dr. Reddy's,False
+Pantonix,Pantoprazole for acid reflux,Digestive,65.0,Macleods,False
+Paracetamol,Common pain reliever and fever reducer,Pain Relief,15.0,GSK,False
+Parlodel,Bromocriptine for Parkinson's disease and prolactin disorders,Neurology,180.0,Novartis,True
 Paroxetine,SSRI antidepressant used to treat depression and anxiety,Mental Health,120.0,GSK,True
+Paxil,Paroxetine for depression and anxiety,Mental Health,125.0,GSK,True
 Penicillin,Antibiotic used to treat bacterial infections,Antibiotic,45.0,Pfizer,True
 Pentoxifylline,Medication used to improve blood flow,Cardiovascular,95.0,Sanofi,True
+Pepcid,Famotidine for acidity,Digestive,50.0,Merck,False
+Pepto-Bismol,Bismuth subsalicylate for digestive issues,Digestive,35.0,Procter & Gamble,False
+Percocet,Oxycodone with acetaminophen for pain,Pain Relief,190.0,Endo,True
 Perindopril,ACE inhibitor used to treat high blood pressure and heart failure,Cardiovascular,85.0,Servier,True
+Persantine,Dipyridamole for blood clots,Cardiovascular,95.0,Boehringer Ingelheim,True
 Phenazopyridine,Medication used to treat urinary tract pain,Urology,45.0,Johnson & Johnson,False
+Phenergan,Promethazine for allergies and nausea,Allergy,50.0,Wyeth,True
 Phenobarbital,Barbiturate used to treat seizures,Neurology,65.0,Bayer,True
 Phenytoin,Anticonvulsant used to treat seizures,Neurology,55.0,Pfizer,True
+Phyllocontin,Aminophylline for asthma,Respiratory,85.0,Forest,True
 Pioglitazone,Thiazolidinedione used to treat type 2 diabetes,Diabetes,120.0,Takeda,True
+Plavix,Clopidogrel for blood clots,Cardiovascular,70.0,Sanofi,True
+Pletal,Cilostazol for peripheral artery disease,Cardiovascular,150.0,Otsuka,True
+Pondimin,Fenfluramine for weight loss,Weight Loss,120.0,Wyeth,True
 Potassium Chloride,Electrolyte supplement used to treat low potassium levels,Electrolytes,25.0,Pfizer,False
+Pradaxa,Dabigatran anticoagulant,Cardiovascular,320.0,Boehringer Ingelheim,True
 Pramipexole,Dopamine agonist used to treat Parkinson's disease,Neurology,180.0,Boehringer Ingelheim,True
+Pravachol,Pravastatin for cholesterol,Cardiovascular,100.0,Bristol-Myers Squibb,True
 Pravastatin,Statin medication that lowers cholesterol levels,Cardiovascular,95.0,Bristol-Myers Squibb,True
 Prazosin,Alpha-blocker used to treat high blood pressure,Cardiovascular,65.0,Pfizer,True
 Prednisolone,Corticosteroid used to treat inflammation and autoimmune conditions,Anti-inflammatory,75.0,Pfizer,True
 Prednisone,Corticosteroid used to treat inflammation and autoimmune conditions,Anti-inflammatory,65.0,Pfizer,True
 Pregabalin,Anticonvulsant used to treat seizures, nerve pain, and anxiety,Neurology,180.0,Pfizer,True
+Premarin,Conjugated estrogens for menopause,Hormonal,220.0,Pfizer,True
+Prevacid,Lansoprazole for acid reflux,Digestive,100.0,Takeda,False
+Prilosec,Omeprazole for acid reflux,Digestive,35.0,AstraZeneca,False
 Primidone,Anticonvulsant used to treat seizures and tremors,Neurology,95.0,Wyeth,True
+Procardia,Nifedipine for hypertension and angina,Cardiovascular,80.0,Pfizer,True
+Prograf,Tacrolimus immunosuppressant,Immunosuppressant,460.0,Astellas,True
+Prolia,Denosumab for osteoporosis,Bone Health,850.0,Amgen,True
 Promethazine,Antihistamine used to treat allergies, nausea, and as a sedative,Allergy,45.0,Wyeth,True
+Propofol,Anesthetic for surgery,Anesthetic,280.0,Fresenius,True
 Propranolol,Beta-blocker used to treat high blood pressure and tremors,Cardiovascular,35.0,Wyeth,True
+Protonix,Pantoprazole for acid reflux,Digestive,75.0,Wyeth,False
+Proventil,Albuterol for asthma,Respiratory,230.0,Schering-Plough,True
+Provera,Medroxyprogesterone for hormonal issues,Hormonal,125.0,Pfizer,True
+Prozac,Fluoxetine for depression and OCD,Mental Health,100.0,Eli Lilly,True
 Pseudoephedrine,Decongestant used to treat nasal congestion,Respiratory,25.0,Johnson & Johnson,False
+Pulmicort,Budesonide for asthma,Respiratory,330.0,AstraZeneca,True
 Pyrazinamide,Antimycobacterial medication used to treat tuberculosis,Antibiotic,85.0,Lupin,True
 Pyridostigmine,Cholinesterase inhibitor used to treat myasthenia gravis,Neurology,120.0,Valeant,True
 Quetiapine,Atypical antipsychotic used to treat schizophrenia and bipolar disorder,Mental Health,180.0,AstraZeneca,True
 Quinapril,ACE inhibitor used to treat high blood pressure and heart failure,Cardiovascular,65.0,Pfizer,True
+Rablet,Rabeprazole for gastric acidity,Digestive,75.0,Sun Pharma,False
 Raloxifene,Selective estrogen receptor modulator used to prevent osteoporosis,Bone Health,250.0,Eli Lilly,True
 Ramipril,ACE inhibitor used to treat high blood pressure and heart failure,Cardiovascular,55.0,Sanofi,True
+Ranexa,Ranolazine for chronic angina,Cardiovascular,220.0,Gilead,True
 Ranitidine,H2 blocker that decreases stomach acid production,Digestive,22.0,Cadila,False
+Rantac,Ranitidine for acidity and ulcers,Digestive,20.0,J.B. Chemicals,False
+Rantac-R,Ranitidine and antispasmodic combination,Digestive,45.0,J.B. Chemicals,False
+Razadyne,Galantamine for Alzheimer's disease,Neurology,280.0,Johnson & Johnson,True
+Rebetol,Ribavirin for hepatitis C,Antiviral,460.0,Merck,True
+Reglan,Metoclopramide for nausea and gastroparesis,Digestive,40.0,Alaven,True
+Relafen,Nabumetone for pain and inflammation,Pain Relief,70.0,GSK,True
+Relispray,Topical spray for muscle pain,Pain Relief,95.0,GSK,False
+Remeron,Mirtazapine for depression,Mental Health,160.0,Organon,True
+Renagel,Sevelamer for kidney disease,Kidney Care,320.0,Sanofi,True
+Requip,Ropinirole for Parkinson's disease,Neurology,190.0,GSK,True
+Restoril,Temazepam for insomnia,Mental Health,90.0,Mallinckrodt,True
+Retin-A,Tretinoin for acne,Dermatology,180.0,Johnson & Johnson,True
+Revital,Multivitamin for energy and vitality,Vitamins,150.0,Dr. Reddy's,False
+Revatio,Sildenafil for pulmonary hypertension,Cardiovascular,260.0,Pfizer,True
+Reyataz,Atazanavir for HIV,Antiviral,480.0,Bristol-Myers Squibb,True
+Rifadin,Rifampin for tuberculosis,Antibiotic,100.0,Sanofi,True
 Rifampin,Antimycobacterial medication used to treat tuberculosis,Antibiotic,95.0,Sanofi,True
+Rimactane,Rifampin for tuberculosis,Antibiotic,98.0,Novartis,True
+Risperdal,Risperidone for schizophrenia and bipolar disorder,Mental Health,160.0,Johnson & Johnson,True
 Risperidone,Atypical antipsychotic used to treat schizophrenia and bipolar disorder,Mental Health,150.0,Johnson & Johnson,True
+Ritalin,Methylphenidate for ADHD,Mental Health,160.0,Novartis,True
 Ritonavir,Protease inhibitor used to treat HIV/AIDS,Antiviral,450.0,Abbott,True
+Rivastigmine,Cholinesterase inhibitor for Alzheimer's disease,Neurology,220.0,Novartis,True
 Rivaroxaban,Anticoagulant used to prevent blood clots,Cardiovascular,320.0,Bayer,True
+Robaxin,Methocarbamol muscle relaxant,Muscle Relaxant,50.0,Forest,True
+Robinul,Glycopyrrolate for ulcers,Digestive,65.0,Shionogi,True
+Rocaltrol,Calcitriol for vitamin D deficiency,Vitamins,160.0,Roche,True
+Rocephin,Ceftriaxone antibiotic,Antibiotic,190.0,Roche,True
 Ropinirole,Dopamine agonist used to treat Parkinson's disease and restless legs syndrome,Neurology,180.0,GSK,True
 Rosuvastatin,Statin medication that lowers cholesterol levels,Cardiovascular,120.0,AstraZeneca,True
+Rulide,Roxithromycin antibiotic,Antibiotic,120.0,Sanofi,True
+Rythmol,Propafenone for arrhythmias,Cardiovascular,180.0,Abbott,True
 Salbutamol,Bronchodilator used to treat asthma and COPD,Respiratory,85.0,GSK,False
 Salmeterol,Long-acting beta-agonist used to treat asthma and COPD,Respiratory,180.0,GSK,True
+Sandimmune,Cyclosporine immunosuppressant,Immunosuppressant,540.0,Novartis,True
+Sandostatin,Octreotide for acromegaly and tumors,Endocrine,650.0,Novartis,True
+Sansert,Methysergide for migraines,Neurology,220.0,Novartis,True
+Sarafem,Fluoxetine for PMDD,Mental Health,105.0,Eli Lilly,True
+Scopolamine,For motion sickness and nausea,Digestive,65.0,Baxter,True
+Sectral,Acebutolol for hypertension,Cardiovascular,85.0,Sanofi,True
+Seldane,Terfenadine for allergies,Allergy,95.0,Hoechst,True
+Serevent,Salmeterol for asthma,Respiratory,190.0,GSK,True
+Seroquel,Quetiapine for schizophrenia and bipolar disorder,Mental Health,190.0,AstraZeneca,True
 Sertraline,SSRI antidepressant used to treat depression, anxiety, and OCD,Mental Health,48.0,Intas,True
+Shelcal,Calcium and Vitamin D3 supplement for bones,Bone Health,120.0,Elder,False
 Sildenafil,PDE5 inhibitor used to treat erectile dysfunction and pulmonary hypertension,Urology,250.0,Pfizer,True
+Silenor,Doxepin for insomnia,Mental Health,120.0,Pernix,True
 Simvastatin,Statin medication that lowers cholesterol levels,Cardiovascular,85.0,Merck,True
+Sinemet,Carbidopa-levodopa for Parkinson's disease,Neurology,330.0,Merck,True
+Sinequan,Doxepin for depression and anxiety,Mental Health,95.0,Pfizer,True
+Singulair,Montelukast for asthma and allergies,Respiratory,45.0,Merck,True
 Sitagliptin,DPP-4 inhibitor used to treat type 2 diabetes,Diabetes,180.0,Merck,True
+Skelaxin,Metaxalone muscle relaxant,Muscle Relaxant,85.0,King,True
 Sodium Bicarbonate,Antacid used to treat heartburn and acid indigestion,Digestive,15.0,Church & Dwight,False
+Soframycin,Skin antibiotic cream,Antibiotic,85.0,Sanofi,False
 Solifenacin,Anticholinergic used to treat overactive bladder,Urology,150.0,Astellas,True
+Soma,Carisoprodol muscle relaxant,Muscle Relaxant,75.0,Meda,True
+Sonata,Zaleplon for insomnia,Mental Health,120.0,King,True
+Sorbitrate,Isosorbide dinitrate for angina,Cardiovascular,70.0,AstraZeneca,True
 Sotalol,Beta-blocker used to treat irregular heartbeat,Cardiovascular,95.0,Bristol-Myers Squibb,True
+Spiriva,Tiotropium for COPD,Respiratory,450.0,Boehringer Ingelheim,True
+Sporanox,Itraconazole for fungal infections,Antifungal,160.0,Johnson & Johnson,True
+Sprycel,Dasatinib for leukemia,Oncology,1250.0,Bristol-Myers Squibb,True
 Spironolactone,Potassium-sparing diuretic used to treat heart failure and high blood pressure,Diuretic,65.0,Pfizer,True
+Stadol,Butorphanol for pain,Pain Relief,120.0,Bristol-Myers Squibb,True
+Stelazine,Trifluoperazine for schizophrenia,Mental Health,85.0,GSK,True
+Stemetil,Prochlorperazine for nausea and vertigo,Digestive,65.0,Sanofi,True
+Storvas,Atorvastatin for high cholesterol,Cardiovascular,95.0,Sun Pharma,True
+Strattera,Atomoxetine for ADHD,Mental Health,180.0,Eli Lilly,True
 Sucralfate,Medication used to treat ulcers,Digestive,55.0,Sanofi,False
+Sudafed,Pseudoephedrine for congestion,Respiratory,30.0,Johnson & Johnson,False
+Sular,Nisoldipine for hypertension,Cardiovascular,85.0,Sciele,True
 Sulfamethoxazole-Trimethoprim,Antibiotic combination used to treat bacterial infections,Antibiotic,45.0,Roche,True
 Sumatriptan,Triptan used to treat migraines,Neurology,180.0,GSK,True
+Suprax,Cefixime antibiotic,Antibiotic,125.0,Lupin,True
+Surmontil,Trimipramine for depression,Mental Health,95.0,Sanofi,True
+Symbicort,Budesonide-formoterol for asthma and COPD,Respiratory,680.0,AstraZeneca,True
+Symmetrel,Amantadine for Parkinson's and influenza,Neurology,85.0,Endo,True
+Synthroid,Levothyroxine for hypothyroidism,Hormonal,35.0,Abbott,True
 Tacrolimus,Immunosuppressant used to prevent organ rejection,Immunosuppressant,450.0,Astellas,True
+Tagamet,Cimetidine for ulcers,Digestive,40.0,GSK,False
+Talwin,Pentazocine for pain,Pain Relief,95.0,Sanofi,True
+Tambocor,Flecainide for arrhythmias,Cardiovascular,180.0,3M,True
+Tamiflu,Oseltamivir for influenza,Antiviral,190.0,Roche,True
 Tamoxifen,Selective estrogen receptor modulator used to treat breast cancer,Oncology,180.0,AstraZeneca,True
 Tamsulosin,Alpha-blocker used to treat enlarged prostate,Urology,95.0,Boehringer Ingelheim,True
+Tapazole,Methimazole for hyperthyroidism,Endocrine,85.0,King,True
+Tasigna,Nilotinib for leukemia,Oncology,1350.0,Novartis,True
+Tegretol,Carbamazepine for seizures and nerve pain,Neurology,80.0,Novartis,True
 Telmisartan,Angiotensin II receptor blocker used to treat high blood pressure,Cardiovascular,120.0,Boehringer Ingelheim,True
 Temazepam,Benzodiazepine used to treat insomnia,Mental Health,85.0,Mallinckrodt,True
+Tenoretic,Atenolol with chlorthalidone for hypertension,Cardiovascular,75.0,AstraZeneca,True
+Tenormin,Atenolol for hypertension,Cardiovascular,30.0,AstraZeneca,True
 Tenofovir,Nucleotide reverse transcriptase inhibitor used to treat HIV and hepatitis B,Antiviral,320.0,Gilead,True
+Tenuate,Diethylpropion for weight loss,Weight Loss,120.0,Merrell,True
 Terazosin,Alpha-blocker used to treat high blood pressure and enlarged prostate,Cardiovascular,65.0,Abbott,True
 Terbinafine,Antifungal medication used to treat fungal infections,Antifungal,95.0,Novartis,True
+Teslac,Testolactone for breast cancer,Oncology,320.0,Bristol-Myers Squibb,True
+Tessalon,Benzonatate for cough,Respiratory,125.0,Forest,False
+Testoderm,Testosterone patch,Hormonal,220.0,Watson,True
+Tetracyn,Tetracycline antibiotic,Antibiotic,80.0,Pfizer,True
+Theo-Dur,Theophylline for asthma,Respiratory,60.0,Schering-Plough,True
 Theophylline,Bronchodilator used to treat asthma and COPD,Respiratory,55.0,Mylan,True
 Thiamine,Vitamin B1 supplement used to treat thiamine deficiency,Vitamins,15.0,Merck,False
+Thorazine,Chlorpromazine for schizophrenia,Mental Health,70.0,GSK,True
+Thyrolar,Liothyronine with levothyroxine for hypothyroidism,Hormonal,95.0,Forest,True
+Tiazac,Diltiazem for hypertension,Cardiovascular,90.0,Forest,True
+Ticlid,Ticlopidine for blood clots,Cardiovascular,90.0,Sanofi,True
 Ticlopidine,Antiplatelet medication that prevents blood clots,Cardiovascular,85.0,Sanofi,True
+Tigan,Trimethobenzamide for nausea,Digestive,65.0,Monarch,True
+Tikosyn,Dofetilide for arrhythmias,Cardiovascular,220.0,Pfizer,True
 Timolol,Beta-blocker used to treat glaucoma and high blood pressure,Cardiovascular,95.0,Merck,True
+Timoptic,Timolol eye drops for glaucoma,Eye Care,120.0,Merck,True
 Tizanidine,Muscle relaxant used to treat muscle spasms,Muscle Relaxant,65.0,Novartis,True
+Tobrex,Tobramycin eye drops,Eye Care,95.0,Alcon,True
+Tofranil,Imipramine for depression and enuresis,Mental Health,85.0,Novartis,True
 Tolterodine,Anticholinergic used to treat overactive bladder,Urology,150.0,Pfizer,True
+Topamax,Topiramate for seizures and migraines,Neurology,190.0,Johnson & Johnson,True
 Topiramate,Anticonvulsant used to treat seizures and prevent migraines,Neurology,180.0,Johnson & Johnson,True
+Toradol,Ketorolac for pain,Pain Relief,70.0,Roche,True
+Tracleer,Bosentan for pulmonary hypertension,Cardiovascular,850.0,Actelion,True
 Tramadol,Opioid-like pain medication,Pain Relief,95.0,Johnson & Johnson,True
+Trandate,Labetalol for hypertension,Cardiovascular,125.0,Prometheus,True
+Tranxene,Clorazepate for anxiety,Mental Health,95.0,Abbott,True
+Trasylol,Aprotinin for bleeding,Surgical,450.0,Bayer,True
 Trazodone,Antidepressant used to treat depression and insomnia,Mental Health,65.0,Bristol-Myers Squibb,True
+Trental,Pentoxifylline for blood flow,Cardiovascular,100.0,Sanofi,True
+Trexall,Methotrexate for cancer and autoimmune diseases,Immunosuppressant,190.0,Teva,True
 Triamcinolone,Corticosteroid used to treat inflammation and allergic reactions,Anti-inflammatory,75.0,Bristol-Myers Squibb,True
 Triamterene,Potassium-sparing diuretic used to treat fluid retention and high blood pressure,Diuretic,55.0,GSK,True
+Trilafon,Perphenazine for schizophrenia,Mental Health,85.0,Schering-Plough,True
+Trileptal,Oxcarbazepine for seizures,Neurology,230.0,Novartis,True
+Trimox,Amoxicillin antibiotic,Antibiotic,50.0,Apothecon,True
+Trusopt,Dorzolamide for glaucoma,Eye Care,120.0,Merck,True
+Tylenol,Acetaminophen for pain and fever,Pain Relief,22.0,Johnson & Johnson,False
+Ultram,Tramadol for pain,Pain Relief,100.0,Ortho-McNeil,True
+Ultravate,Halobetasol for skin conditions,Dermatology,95.0,GSK,True
+Unasyn,Ampicillin-sulbactam antibiotic,Antibiotic,120.0,Pfizer,True
+Uniphyl,Theophylline for asthma,Respiratory,65.0,Purdue,True
+Urecholine,Bethanechol for urinary retention,Urology,75.0,Merck,True
+Urispas,Flavoxate for urinary discomfort,Urology,85.0,Smith & Nephew,True
+Uroxatral,Alfuzosin for enlarged prostate,Urology,120.0,Sanofi,True
 Valacyclovir,Antiviral medication used to treat herpes infections,Antiviral,150.0,GSK,True
+Valium,Diazepam for anxiety and seizures,Mental Health,100.0,Roche,True
+Valproic,Valproic acid for seizures and bipolar disorder,Neurology,120.0,Abbott,True
 Valsartan,Angiotensin II receptor blocker used to treat high blood pressure and heart failure,Cardiovascular,95.0,Novartis,True
+Vancocin,Vancomycin for serious infections,Antibiotic,190.0,ViroPharma,True
 Vancomycin,Antibiotic used to treat serious bacterial infections,Antibiotic,180.0,Eli Lilly,True
+Vasotec,Enalapril for hypertension,Cardiovascular,70.0,Merck,True
+Velosef,Cephradine antibiotic,Antibiotic,75.0,Squibb,True
 Venlafaxine,SNRI antidepressant used to treat depression and anxiety,Mental Health,120.0,Wyeth,True
+Ventolin,Albuterol for asthma,Respiratory,90.0,GSK,True
 Verapamil,Calcium channel blocker used to treat high blood pressure and chest pain,Cardiovascular,85.0,Abbott,True
-Warfarin,Anticoagulant used to prevent blood clots,Cardiovascular,45.0,Bristol-Myers Squibb,True
+Vermox,Mebendazole for worm infections,Antiparasitic,40.0,Janssen,False
+Viagra,Sildenafil for erectile dysfunction,Urology,260.0,Pfizer,True
+Vibramycin,Doxycycline antibiotic,Antibiotic,80.0,Pfizer,True
+Vicodin,Hydrocodone with acetaminophen for pain,Pain Relief,200.0,Abbott,True
+Videx,Didanosine for HIV,Antiviral,450.0,Bristol-Myers Squibb,True
+Vigamox,Moxifloxacin eye drops,Eye Care,120.0,Alcon,True
+Vioxx,Rofecoxib for pain and inflammation,Pain Relief,120.0,Merck,True
+Vira-A,Vidarabine for viral infections,Antiviral,220.0,Parke-Davis,True
+Viracept,Nelfinavir for HIV,Antiviral,480.0,Agouron,True
+Viramune,Nevirapine for HIV,Antiviral,450.0,Boehringer Ingelheim,True
+Vistaril,Hydroxyzine for anxiety and itching,Allergy,50.0,Pfizer,True
+Vitamin B12,Cyanocobalamin for vitamin B12 deficiency,Vitamins,25.0,Merck,False
+Volini,Topical gel for pain relief,Pain Relief,75.0,Sanofi,False
+Voltaren,Diclofenac for pain and inflammation,Pain Relief,30.0,Novartis,False
+Voveran,Diclofenac for pain and inflammation,Pain Relief,25.0,Novartis,False
+Vytorin,Ezetimibe with simvastatin for cholesterol,Cardiovascular,180.0,Merck,True
+Wellbutrin,Bupropion for depression and smoking cessation,Mental Health,290.0,GSK,True
+Wytensin,Guanabenz for hypertension,Cardiovascular,85.0,GSK,True
+Xalatan,Latanoprost for glaucoma,Eye Care,280.0,Pfizer,True
+Xanax,Alprazolam for anxiety and panic disorders,Mental Health,115.0,Pfizer,True
+Xeloda,Capecitabine for cancer,Oncology,850.0,Roche,True
+Xenical,Orlistat for weight loss,Weight Loss,190.0,GSK,True
+Xifaxan,Rifaximin for traveler's diarrhea and hepatic encephalopathy,Digestive,320.0,Salix,True
+Xolair,Omalizumab for asthma,Respiratory,1200.0,Genentech,True
+Xopenex,Levalbuterol for asthma,Respiratory,95.0,Sepracor,True
+Xylocaine,Lidocaine for local anesthesia,Anesthetic,50.0,AstraZeneca,True
 Xylometazoline,Decongestant used to treat nasal congestion,Respiratory,25.0,Novartis,False
 Zafirlukast,Leukotriene receptor antagonist used to treat asthma,Respiratory,150.0,AstraZeneca,True
+Zagam,Sparfloxacin antibiotic,Antibiotic,120.0,Sanofi,True
+Zantac,Ranitidine for acidity and ulcers,Digestive,25.0,GSK,False
+Zarontin,Ethosuximide for seizures,Neurology,95.0,Pfizer,True
+Zaroxolyn,Metolazone diuretic,Diuretic,55.0,UCB,True
+Zebeta,Bisoprolol for hypertension,Cardiovascular,90.0,Teva,True
+Zefazone,Cefmetazole antibiotic,Antibiotic,120.0,Astellas,True
+Zegerid,Omeprazole with sodium bicarbonate for acid reflux,Digestive,45.0,Santarus,False
+Zelapar,Selegiline for Parkinson's disease,Neurology,160.0,Valeant,True
+Zelnorm,Tegaserod for irritable bowel syndrome,Digestive,220.0,Novartis,True
+Zerodol,Aceclofenac for pain and inflammation,Pain Relief,85.0,Ipca,True
+Zestoretic,Lisinopril with hydrochlorothiazide for hypertension,Cardiovascular,75.0,AstraZeneca,True
+Zestril,Lisinopril for hypertension,Cardiovascular,40.0,AstraZeneca,True
+Zetia,Ezetimibe for cholesterol,Cardiovascular,150.0,Merck,True
+Ziac,Bisoprolol with hydrochlorothiazide for hypertension,Cardiovascular,95.0,Teva,True
 Zidovudine,Nucleoside reverse transcriptase inhibitor used to treat HIV/AIDS,Antiviral,320.0,GSK,True
-Ziprasidone,Atypical antipsychotic used to treat schizophrenia and bipolar disorder,Mental Health,180.0,Pfizer,True
+Zinacef,Cefuroxime antibiotic,Antibiotic,130.0,GSK,True
+Zincovit,Multivitamin with minerals supplement,Vitamins,95.0,USV,False
+Zithromax,Azithromycin antibiotic,Antibiotic,60.0,Pfizer,True
+Zocor,Simvastatin for cholesterol,Cardiovascular,90.0,Merck,True
+Zofran,Ondansetron for nausea and vomiting,Digestive,100.0,GSK,True
+Zoladex,Goserelin for cancer and endometriosis,Hormonal,650.0,AstraZeneca,True
+Zoloft,Sertraline for depression and anxiety,Mental Health,50.0,Pfizer,True
 Zolmitriptan,Triptan used to treat migraines,Neurology,150.0,AstraZeneca,True
 Zolpidem,Sedative used to treat insomnia,Mental Health,95.0,Sanofi,True
+Zometa,Zoledronic acid for bone complications,Oncology,850.0,Novartis,True
+Zomig,Zolmitriptan for migraines,Neurology,160.0,AstraZeneca,True
+Zonalon,Doxepin for itching and anxiety,Mental Health,120.0,Bioglan,True
+Zonegran,Zonisamide for seizures,Neurology,220.0,Elan,True
+Zosyn,Piperacillin-tazobactam antibiotic,Antibiotic,180.0,Wyeth,True
+Zovirax,Acyclovir for herpes infections,Antiviral,190.0,GSK,True
+Zyloprim,Allopurinol for gout,Gout,70.0,Prometheus,True
+Zyprexa,Olanzapine for schizophrenia and bipolar disorder,Mental Health,330.0,Eli Lilly,True
+Zyrtec,Cetirizine for allergies,Allergy,30.0,Johnson & Johnson,False
+Zyvox,Linezolid antibiotic,Antibiotic,450.0,Pfizer,True
