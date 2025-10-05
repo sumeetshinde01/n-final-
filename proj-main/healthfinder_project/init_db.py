@@ -1,5 +1,6 @@
 import csv
 import os
+from flask import render_template, request
 from healthfinder import create_app
 from healthfinder.db import db
 from healthfinder.models import Medicine, Pharmacy, MedicineStock
@@ -18,7 +19,7 @@ def init_db():
         print("Cleared existing medicines to repopulate the database.")
         
         # Path to the CSV file
-        csv_file_path = os.path.join(os.path.dirname(__file__), 'A_Z_medicines_dataset_of_India.csv')
+        csv_file_path = os.path.join(os.path.dirname(__file__), 'medicines.csv')
         
         if os.path.exists(csv_file_path):
             # Import medicines from CSV file
@@ -86,6 +87,7 @@ def init_db():
         medicine_count = Medicine.query.count()
         print(f"Total medicines in database: {medicine_count}")
         print("Database initialization complete!")
+        
         
 if __name__ == "__main__":
     init_db()
