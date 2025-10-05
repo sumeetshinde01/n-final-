@@ -7,7 +7,6 @@ from healthfinder.models import Medicine, Pharmacy, MedicineStock
 
 def init_db():
     """Initialize the database with sample data."""
-    # Create the application context
     app = create_app()
     with app.app_context():
         # Create tables if they don't exist
@@ -91,3 +90,4 @@ def init_db():
         
 if __name__ == "__main__":
     init_db()
+
