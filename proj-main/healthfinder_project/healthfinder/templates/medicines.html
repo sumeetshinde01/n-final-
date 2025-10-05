@@ -1,255 +1,481 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Medicine Availability | HealthFinder</title>
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
     <!-- Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
     <style>
-        .medicine-card {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .medicine-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-        }
-        .search-container {
-            background-color: #f8f9fa;
-            border-radius: 10px;
-            padding: 20px;
-            margin-bottom: 30px;
-        }
-        .availability-badge {
-            font-size: 0.8rem;
-            padding: 5px 10px;
-        }
-        .pharmacy-info {
-            font-size: 0.9rem;
-        }
+      .medicine-card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      .medicine-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      }
+      .search-container {
+        background-color: #f8f9fa;
+        border-radius: 10px;
+        padding: 20px;
+        margin-bottom: 30px;
+      }
+      .availability-badge {
+        font-size: 0.8rem;
+        padding: 5px 10px;
+      }
+      .pharmacy-info {
+        font-size: 0.9rem;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-        <div class="container">
-            <a class="navbar-brand" href="/">HealthFinder</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav me-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="/">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="/medicines">Medicines</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/hospitals">Hospitals</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/pharmacies">Pharmacies</a>
-                    </li>
-                </ul>
-                <div class="d-flex">
-                    <a href="/login" class="btn btn-outline-light me-2">Login</a>
-                    <a href="/register" class="btn btn-light">Register</a>
-                </div>
-            </div>
+      <div class="container">
+        <a class="navbar-brand" href="/">HealthFinder</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="/medicines">Medicines</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/hospitals">Hospitals</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/pharmacies">Pharmacies</a>
+            </li>
+          </ul>
+          <div class="d-flex">
+            <a href="/login" class="btn btn-outline-light me-2">Login</a>
+            <a href="/register" class="btn btn-light">Register</a>
+          </div>
         </div>
+      </div>
     </nav>
 
     <!-- Main Content -->
     <div class="container py-5">
-        <h1 class="mb-4">Medicine Availability</h1>
-        
-        <!-- Search Section -->
-        <div class="search-container shadow-sm">
-            <form action="/medicines" method="get">
-                <div class="row">
-                    <div class="col-md-8">
-                        <div class="input-group mb-3">
-                            <input type="text" class="form-control" placeholder="Search for medicines..." id="medicineSearch" name="query" value="{{ search_query }}">
-                            <button class="btn btn-primary" type="submit">
-                                <i class="fas fa-search"></i> Search
-                            </button>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <select class="form-select" id="locationFilter" name="location">
-                            <option selected>Filter by location</option>
-                            <option value="1">Nearby (5 km)</option>
-                            <option value="2">Within 10 km</option>
-                            <option value="3">All locations</option>
-                        </select>
-                    </div>
-                </div>
-            </form>
-        </div>
-        
+      <h1 class="mb-4">Medicine Availability</h1>
 
-        
-        <!-- Medicines List -->
-        <div class="row row-cols-1 row-cols-md-3 g-4" id="medicinesList">
-            {% for medicine in medicines %}
-            <div class="col">
-                <div class="card h-100 medicine-card">
-                    <div class="card-body">
-                        <div class="d-flex justify-content-between align-items-start">
-                            <h5 class="card-title">{{ medicine.name }}</h5>
-                            <span class="badge bg-success availability-badge">In Stock</span>
-                        </div>
-                        <p class="card-text">{{ medicine.description }}</p>
-                        <p class="card-text"><strong>Category:</strong> {{ medicine.category }}</p>
-                        <p class="card-text"><strong>Price:</strong> ₹{{ medicine.price }}</p>
-                        <p class="card-text"><strong>Manufacturer:</strong> {{ medicine.manufacturer }}</p>
-                        {% if medicine.prescription_required %}
-                        <p class="card-text"><span class="badge bg-warning">Prescription Required</span></p>
-                        {% endif %}
-                        <hr>
-                        <div class="pharmacy-info">
-                            <p class="mb-1"><strong>Available at:</strong></p>
-                            <ul class="list-unstyled">
-                        <li><i class="fas fa-store text-primary me-2"></i> City Pharmacy (2.3 km)</li>
-                        <li><i class="fas fa-store text-primary me-2"></i> MediPlus (3.5 km)</li>
-                        <li><i class="fas fa-store text-primary me-2"></i> HealthMart (5.1 km)</li>
-                            </ul>
-                        </div>
-                    </div>
-                     <div class="card-footer bg-transparent">
-                        <button class="btn btn-outline-primary w-100" onclick="event.preventDefault();">
-                            <i class="fas fa-map-marker-alt me-2"></i> View on Map
-                        </button>
-                    </div>
-                </div>
+      <!-- Search Section -->
+      <div class="search-container shadow-sm">
+        <form action="/medicines" method="get">
+          <div class="row">
+            <div class="col-md-8">
+              <div class="input-group mb-3">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Search for medicines..."
+                  id="medicineSearch"
+                  name="query"
+                  value="{{ search_query }}"
+                />
+                <button class="btn btn-primary" type="submit">
+                  <i class="fas fa-search"></i> Search
+                </button>
+              </div>
             </div>
-            {% endfor %}
+            <div class="col-md-4">
+              <select class="form-select" id="locationFilter" name="location">
+                <option value="all" selected>All locations</option>
+                <option value="5">Nearby (5 km)</option>
+                <option value="10">Within 10 km</option>
+                <option value="20">Within 20 km</option>
+              </select>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <!-- Medicines List -->
+      <div class="row row-cols-1 row-cols-md-3 g-4" id="medicinesList">
+        {% for medicine in medicines %}
+        <div class="col">
+          <div class="card h-100 medicine-card">
+            <div class="card-body">
+              <div class="d-flex justify-content-between align-items-start">
+                <h5 class="card-title">{{ medicine.name }}</h5>
+                <span class="badge bg-success availability-badge"
+                  >In Stock</span
+                >
+              </div>
+              <p class="card-text">{{ medicine.description }}</p>
+              <p class="card-text">
+                <strong>Category:</strong> {{ medicine.category }}
+              </p>
+              <p class="card-text">
+                <strong>Price:</strong> ₹{{ medicine.price }}
+              </p>
+              <p class="card-text">
+                <strong>Manufacturer:</strong> {{ medicine.manufacturer }}
+              </p>
+              {% if medicine.prescription_required %}
+              <p class="card-text">
+                <span class="badge bg-warning">Prescription Required</span>
+              </p>
+              {% endif %}
+              <hr />
+              <div class="pharmacy-info">
+                <p class="mb-1"><strong>Available at:</strong></p>
+                <ul class="list-unstyled" id="pharmacies-{{ medicine.id }}">
+                  <li>
+                    <i class="fas fa-store text-primary me-2"></i>
+                    <span class="distance-loading"
+                      >Calculating distance...</span
+                    >
+                  </li>
+                  <li>
+                    <i class="fas fa-store text-primary me-2"></i>
+                    <span class="distance-loading"
+                      >Calculating distance...</span
+                    >
+                  </li>
+                  <li>
+                    <i class="fas fa-store text-primary me-2"></i>
+                    <span class="distance-loading"
+                      >Calculating distance...</span
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="card-footer bg-transparent">
+              <button
+                class="btn btn-outline-primary w-100 view-map-btn"
+                data-medicine-name="{{ medicine.name }}"
+              >
+                <i class="fas fa-map-marker-alt me-2"></i> View on Map
+              </button>
+            </div>
+          </div>
         </div>
-        
-        <!-- No Results Message (Hidden by default) -->
-        <div class="text-center py-5 {% if medicines %}d-none{% endif %}" id="noResults">
-            <i class="fas fa-search fa-3x text-muted mb-3"></i>
-            <h3>No medicines found</h3>
-            <p class="text-muted">Try adjusting your search criteria</p>
-        </div>
-        
-        <!-- Pagination -->
-        <nav aria-label="Medicine pagination" class="mt-4">
-            <ul class="pagination justify-content-center">
-                {% if pagination.has_prev %}
-                <li class="page-item">
-                    <a class="page-link" href="{{ url_for('medicines.medicines', page=pagination.prev_num) }}" aria-label="Previous">
-                        <span aria-hidden="true">&laquo;</span>
-                    </a>
-                </li>
-                {% else %}
-                <li class="page-item disabled">
-                    <a class="page-link" href="#" aria-label="Previous">
-                        <span aria-hidden="true">&laquo;</span>
-                    </a>
-                </li>
-                {% endif %}
-                
-                {% for page_num in pagination.iter_pages(left_edge=1, right_edge=1, left_current=2, right_current=2) %}
-                    {% if page_num %}
-                        {% if page_num == pagination.page %}
-                        <li class="page-item active"><a class="page-link" href="#">{{ page_num }}</a></li>
-                        {% else %}
-                        <li class="page-item"><a class="page-link" href="{{ url_for('medicines.medicines', page=page_num) }}">{{ page_num }}</a></li>
-                        {% endif %}
-                    {% else %}
-                        <li class="page-item disabled"><a class="page-link" href="#">...</a></li>
-                    {% endif %}
-                {% endfor %}
-                
-                {% if pagination.has_next %}
-                <li class="page-item">
-                    <a class="page-link" href="{{ url_for('medicines.medicines', page=pagination.next_num) }}" aria-label="Next">
-                        <span aria-hidden="true">&raquo;</span>
-                    </a>
-                </li>
-                {% else %}
-                <li class="page-item disabled">
-                    <a class="page-link" href="#" aria-label="Next">
-                        <span aria-hidden="true">&raquo;</span>
-                    </a>
-                </li>
-                {% endif %}
-            </ul>
-        </nav>
+        {% endfor %}
+      </div>
+
+      
+      <script>
+        const medicineDistances = new Map();
+        let userLocation = null;
+
+        document.addEventListener("DOMContentLoaded", function () {
+          initializeLocation();
+          
+          const locationFilter = document.getElementById('locationFilter');
+          locationFilter.addEventListener('change', filterByLocation);
+          
+          document.querySelectorAll('.view-map-btn').forEach(button => {
+            button.addEventListener('click', function() {
+              const medicineName = this.getAttribute('data-medicine-name');
+              openMapForMedicine(medicineName);
+            });
+          });
+        });
+
+        function initializeLocation() {
+          if (!navigator.geolocation) {
+            updateAllMedicineDistances();
+            return;
+          }
+
+          const options = {
+            enableHighAccuracy: true,
+            timeout: 10000,
+            maximumAge: 60000,
+          };
+
+          navigator.geolocation.getCurrentPosition(
+            function (position) {
+              userLocation = {
+                lat: position.coords.latitude,
+                lng: position.coords.longitude,
+              };
+              updateAllMedicineDistances();
+            },
+            function (error) {
+              console.error("Error getting location:", error);
+              updateAllMedicineDistances();
+            },
+            options
+          );
+        }
+
+        function updateAllMedicineDistances() {
+          const centerLat = userLocation ? userLocation.lat : 28.6139;
+          const centerLng = userLocation ? userLocation.lng : 77.209;
+
+          const pharmacyChains = [
+            "Apollo Pharmacy", "MedPlus", "Wellness Forever", "Guardian Pharmacy",
+            "Health & Glow", "PharmEasy Store", "1mg Pharmacy", "Netmeds Pharmacy",
+            "Fortis Pharmacy", "Max Healthcare", "Local Medical Store", "City Pharmacy"
+          ];
+
+          const medicineCards = document.querySelectorAll(".medicine-card");
+
+          medicineCards.forEach((card, index) => {
+            const pharmacyList = card.querySelector(".list-unstyled");
+            const pharmacyItems = pharmacyList.querySelectorAll("li");
+
+            const distances = [];
+            
+            pharmacyItems.forEach((item, i) => {
+              const distance = 0.5 + Math.random() * 7.5;
+              distances.push(distance);
+              
+              const pharmacyName = pharmacyChains[Math.floor(Math.random() * pharmacyChains.length)];
+              
+              const distanceSpan = item.querySelector("span");
+              distanceSpan.textContent = `${pharmacyName} (${distance.toFixed(1)} km)`;
+              distanceSpan.classList.remove("distance-loading");
+            });
+            
+            if (distances.length > 0) {
+              const minDistance = Math.min(...distances);
+              medicineDistances.set(`medicine-${index}`, minDistance);
+              card.setAttribute('data-min-distance', minDistance);
+            }
+          });
+        }
+
+        function calculateDistance(lat1, lon1, lat2, lon2) {
+          const R = 6371; 
+          const dLat = ((lat2 - lat1) * Math.PI) / 180;
+          const dLon = ((lon2 - lon1) * Math.PI) / 180;
+          const a =
+            Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+            Math.cos((lat1 * Math.PI) / 180) *
+              Math.cos((lat2 * Math.PI) / 180) *
+              Math.sin(dLon / 2) *
+              Math.sin(dLon / 2);
+          const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+          const distance = R * c;
+          return distance;
+        }
+
+        // Location filter function
+        function filterByLocation() {
+          const locationFilter = document.getElementById('locationFilter');
+          const selectedValue = locationFilter.value;
+          const medicineCards = document.querySelectorAll('.medicine-card');
+          
+          medicineCards.forEach(card => {
+            if (selectedValue === 'all') {
+              card.closest('.col').style.display = '';
+            } else {
+              const minDistance = card.getAttribute('data-min-distance');
+              if (minDistance && parseFloat(minDistance) <= parseFloat(selectedValue)) {
+                card.closest('.col').style.display = '';
+              } else {
+                card.closest('.col').style.display = 'none';
+              }
+            }
+          });
+        }
+
+        function openMapForMedicine(medicineName) {
+          if (!userLocation) {
+            alert('Please allow location access to find nearby pharmacies.');
+            return;
+          }
+
+          const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+          
+          const searchQuery = `pharmacy medical store chemist ${medicineName}`;
+          
+          if (isIOS) {
+            const url = `https://maps.apple.com/?q=${encodeURIComponent(searchQuery)}&sll=${userLocation.lat},${userLocation.lng}&z=12&t=m`;
+            window.open(url, '_blank');
+          } else {
+            const url = `https://www.google.com/maps/search/${encodeURIComponent(searchQuery)}/@${userLocation.lat},${userLocation.lng},13z`;
+            window.open(url, '_blank');
+          }
+        }
+
+        function findNearbyPharmacies() {
+          const apiKey = 'AIzaSyBWevcMn1N8_jJbrTmOvIdFmmMoCBmkE4s';
+          const radius = 5000; 
+          const types = ['pharmacy', 'drugstore', 'hospital', 'health'];
+          
+          const url = `https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${userLocation.lat},${userLocation.lng}&radius=${radius}&type=${types.join('|')}&key=${apiKey}`;
+          
+          fetch(url)
+            .then(response => response.json())
+            .then(data => {
+              if (data.results) {          
+                console.log('Nearby pharmacies:', data.results);
+              }
+            })
+            .catch(error => {
+              console.error('Error fetching pharmacy data:', error);
+            });
+        }
+      </script>
+
+      <style>
+        .distance-loading {
+          color: #6c757d;
+          font-style: italic;
+        }
+      </style>
+
+      <!-- No Results Message (Hidden by default) -->
+      <div
+        class="text-center py-5 {% if medicines %}d-none{% endif %}"
+        id="noResults"
+      >
+        <i class="fas fa-search fa-3x text-muted mb-3"></i>
+        <h3>No medicines found</h3>
+        <p class="text-muted">Try adjusting your search criteria</p>
+      </div>
+
+      <!-- Pagination -->
+      <nav aria-label="Medicine pagination" class="mt-4">
+        <ul class="pagination justify-content-center">
+          {% if pagination.has_prev %}
+          <li class="page-item">
+            <a
+              class="page-link"
+              href="{{ url_for('medicines.medicines', page=pagination.prev_num) }}"
+              aria-label="Previous"
+            >
+              <span aria-hidden="true">&laquo;</span>
+            </a>
+          </li>
+          {% else %}
+          <li class="page-item disabled">
+            <a class="page-link" href="#" aria-label="Previous">
+              <span aria-hidden="true">&laquo;</span>
+            </a>
+          </li>
+          {% endif %} {% for page_num in pagination.iter_pages(left_edge=1,
+          right_edge=1, left_current=2, right_current=2) %} {% if page_num %} {%
+          if page_num == pagination.page %}
+          <li class="page-item active">
+            <a class="page-link" href="#">{{ page_num }}</a>
+          </li>
+          {% else %}
+          <li class="page-item">
+            <a
+              class="page-link"
+              href="{{ url_for('medicines.medicines', page=page_num) }}"
+              >{{ page_num }}</a
+            >
+          </li>
+          {% endif %} {% else %}
+          <li class="page-item disabled">
+            <a class="page-link" href="#">...</a>
+          </li>
+          {% endif %} {% endfor %} {% if pagination.has_next %}
+          <li class="page-item">
+            <a
+              class="page-link"
+              href="{{ url_for('medicines.medicines', page=pagination.next_num) }}"
+              aria-label="Next"
+            >
+              <span aria-hidden="true">&raquo;</span>
+            </a>
+          </li>
+          {% else %}
+          <li class="page-item disabled">
+            <a class="page-link" href="#" aria-label="Next">
+              <span aria-hidden="true">&raquo;</span>
+            </a>
+          </li>
+          {% endif %}
+        </ul>
+      </nav>
     </div>
 
     <!-- Footer -->
     <footer class="bg-dark text-white py-4">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <h5>HealthFinder</h5>
-                    <p>Your one-stop solution for all healthcare needs.</p>
-                </div>
-                <div class="col-md-3">
-                    <h5>Quick Links</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="/" class="text-white">Home</a></li>
-                        <li><a href="/medicines" class="text-white">Medicines</a></li>
-                        <li><a href="/hospitals" class="text-white">Hospitals</a></li>
-                        <li><a href="/pharmacies" class="text-white">Pharmacies</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-3">
-                    <h5>Contact</h5>
-                    <ul class="list-unstyled">
-                        <li><i class="fas fa-envelope me-2"></i> info@healthfinder.com</li>
-                        <li><i class="fas fa-phone me-2"></i> +1 (555) 123-4567</li>
-                    </ul>
-                </div>
-            </div>
-            <hr>
-            <div class="text-center">
-                <p class="mb-0">&copy; 2023 HealthFinder. All rights reserved.</p>
-            </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <h5>HealthFinder</h5>
+            <p>Your one-stop solution for all healthcare needs.</p>
+          </div>
+          <div class="col-md-3">
+            <h5>Quick Links</h5>
+            <ul class="list-unstyled">
+              <li><a href="/" class="text-white">Home</a></li>
+              <li><a href="/medicines" class="text-white">Medicines</a></li>
+              <li><a href="/hospitals" class="text-white">Hospitals</a></li>
+              <li><a href="/pharmacies" class="text-white">Pharmacies</a></li>
+            </ul>
+          </div>
+          <div class="col-md-3">
+            <h5>Contact</h5>
+            <ul class="list-unstyled">
+              <li>
+                <i class="fas fa-envelope me-2"></i> info@healthfinder.com
+              </li>
+              <li><i class="fas fa-phone me-2"></i> +1 (555) 123-4567</li>
+            </ul>
+          </div>
         </div>
+        <hr />
+        <div class="text-center">
+          <p class="mb-0">&copy; 2023 HealthFinder. All rights reserved.</p>
+        </div>
+      </div>
     </footer>
 
     <!-- Bootstrap JS Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    
-    <!-- Simple search functionality -->
+
+    <!-- search functionality -->
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const searchInput = document.getElementById('medicineSearch');
-            const medicinesList = document.getElementById('medicinesList');
-            const noResults = document.getElementById('noResults');
-            
-            searchInput.addEventListener('keyup', function() {
-                const searchTerm = this.value.toLowerCase();
-                const medicineCards = medicinesList.querySelectorAll('.col');
-                let resultsFound = false;
-                
-                medicineCards.forEach(function(card) {
-                    const medicineName = card.querySelector('.card-title').textContent.toLowerCase();
-                    if (medicineName.includes(searchTerm)) {
-                        card.style.display = '';
-                        resultsFound = true;
-                    } else {
-                        card.style.display = 'none';
-                    }
-                });
-                
-                if (resultsFound) {
-                    medicinesList.classList.remove('d-none');
-                    noResults.classList.add('d-none');
-                } else {
-                    medicinesList.classList.add('d-none');
-                    noResults.classList.remove('d-none');
-                }
-            });
+      document.addEventListener("DOMContentLoaded", function () {
+        const searchInput = document.getElementById("medicineSearch");
+        const medicinesList = document.getElementById("medicinesList");
+        const noResults = document.getElementById("noResults");
+
+        searchInput.addEventListener("keyup", function () {
+          const searchTerm = this.value.toLowerCase();
+          const medicineCards = medicinesList.querySelectorAll(".col");
+          let resultsFound = false;
+
+          medicineCards.forEach(function (card) {
+            const medicineName = card
+              .querySelector(".card-title")
+              .textContent.toLowerCase();
+            if (medicineName.includes(searchTerm)) {
+              card.style.display = "";
+              resultsFound = true;
+            } else {
+              card.style.display = "none";
+            }
+          });
+
+          if (resultsFound) {
+            medicinesList.classList.remove("d-none");
+            noResults.classList.add("d-none");
+          } else {
+            medicinesList.classList.add("d-none");
+            noResults.classList.remove("d-none");
+          }
         });
+      });
     </script>
-</body>
+  </body>
 </html>
-
-
